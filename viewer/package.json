@@ -1,0 +1,22 @@
+{
+  "name": "sap-workflow-mining-viewer",
+  "version": "1.0.0",
+  "description": "Web viewer for SAP workflow mining pattern cards",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "build": "echo 'No build step required - static files served directly'"
+  },
+  "keywords": [
+    "sap",
+    "workflow",
+    "mining",
+    "patterns"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

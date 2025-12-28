@@ -1,0 +1,1802 @@
+[
+  {
+    "matnr": "MAT001",
+    "maktx": "Tree Reality RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 44.38,
+    "gewei": "KG",
+    "base_price": 461.32
+  },
+  {
+    "matnr": "MAT002",
+    "maktx": "Glass Explain RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 25.43,
+    "gewei": "KG",
+    "base_price": 264.93
+  },
+  {
+    "matnr": "MAT003",
+    "maktx": "Capital Successful FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 16.07,
+    "gewei": "KG",
+    "base_price": 4203.17
+  },
+  {
+    "matnr": "MAT004",
+    "maktx": "Hold Leave RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 24.96,
+    "gewei": "KG",
+    "base_price": 66.77
+  },
+  {
+    "matnr": "MAT005",
+    "maktx": "Visit Instead FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 42.18,
+    "gewei": "KG",
+    "base_price": 372.28
+  },
+  {
+    "matnr": "MAT006",
+    "maktx": "Six Less FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 14.39,
+    "gewei": "KG",
+    "base_price": 1737.24
+  },
+  {
+    "matnr": "MAT007",
+    "maktx": "Want Imagine SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 16.04,
+    "gewei": "KG",
+    "base_price": 1498.25
+  },
+  {
+    "matnr": "MAT008",
+    "maktx": "Group Culture FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 1.23,
+    "gewei": "KG",
+    "base_price": 4153.15
+  },
+  {
+    "matnr": "MAT009",
+    "maktx": "Model Role RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 18.93,
+    "gewei": "KG",
+    "base_price": 85.27
+  },
+  {
+    "matnr": "MAT010",
+    "maktx": "Modern Hold RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 30.24,
+    "gewei": "KG",
+    "base_price": 68.64
+  },
+  {
+    "matnr": "MAT011",
+    "maktx": "Window Subject SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 47.94,
+    "gewei": "KG",
+    "base_price": 1991.16
+  },
+  {
+    "matnr": "MAT012",
+    "maktx": "Natural Example SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 38.72,
+    "gewei": "KG",
+    "base_price": 656.37
+  },
+  {
+    "matnr": "MAT013",
+    "maktx": "Suddenly Beautiful RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 35.42,
+    "gewei": "KG",
+    "base_price": 200.04
+  },
+  {
+    "matnr": "MAT014",
+    "maktx": "Short Language RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 32.22,
+    "gewei": "KG",
+    "base_price": 15.26
+  },
+  {
+    "matnr": "MAT015",
+    "maktx": "Bar Law RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 26.49,
+    "gewei": "KG",
+    "base_price": 90.24
+  },
+  {
+    "matnr": "MAT016",
+    "maktx": "Play Test FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 8.71,
+    "gewei": "KG",
+    "base_price": 4197.89
+  },
+  {
+    "matnr": "MAT017",
+    "maktx": "Couple Offer RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 28.02,
+    "gewei": "KG",
+    "base_price": 421.14
+  },
+  {
+    "matnr": "MAT018",
+    "maktx": "Finally Full RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 49.52,
+    "gewei": "KG",
+    "base_price": 79.38
+  },
+  {
+    "matnr": "MAT019",
+    "maktx": "Board Base SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 19.93,
+    "gewei": "KG",
+    "base_price": 206.1
+  },
+  {
+    "matnr": "MAT020",
+    "maktx": "Generation Recent SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 37.89,
+    "gewei": "KG",
+    "base_price": 895.87
+  },
+  {
+    "matnr": "MAT021",
+    "maktx": "Find Follow SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 7.96,
+    "gewei": "KG",
+    "base_price": 402.81
+  },
+  {
+    "matnr": "MAT022",
+    "maktx": "Like Player SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 45.4,
+    "gewei": "KG",
+    "base_price": 137.07
+  },
+  {
+    "matnr": "MAT023",
+    "maktx": "Series Last SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 14.96,
+    "gewei": "KG",
+    "base_price": 1005.89
+  },
+  {
+    "matnr": "MAT024",
+    "maktx": "Compare Road FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 29.53,
+    "gewei": "KG",
+    "base_price": 2517.12
+  },
+  {
+    "matnr": "MAT025",
+    "maktx": "Life Have FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 12.56,
+    "gewei": "KG",
+    "base_price": 4233.58
+  },
+  {
+    "matnr": "MAT026",
+    "maktx": "Likely And FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 32.06,
+    "gewei": "KG",
+    "base_price": 3280.83
+  },
+  {
+    "matnr": "MAT027",
+    "maktx": "Short True SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 38.26,
+    "gewei": "KG",
+    "base_price": 163.31
+  },
+  {
+    "matnr": "MAT028",
+    "maktx": "Which Head RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 18.65,
+    "gewei": "KG",
+    "base_price": 274.37
+  },
+  {
+    "matnr": "MAT029",
+    "maktx": "Possible Learn RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 42.3,
+    "gewei": "KG",
+    "base_price": 246.46
+  },
+  {
+    "matnr": "MAT030",
+    "maktx": "Face Purpose SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 38.55,
+    "gewei": "KG",
+    "base_price": 1711.43
+  },
+  {
+    "matnr": "MAT031",
+    "maktx": "Strong Yourself SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 45.52,
+    "gewei": "KG",
+    "base_price": 1194.89
+  },
+  {
+    "matnr": "MAT032",
+    "maktx": "Art Bad SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 42.59,
+    "gewei": "KG",
+    "base_price": 714.15
+  },
+  {
+    "matnr": "MAT033",
+    "maktx": "Remain Public SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 26.8,
+    "gewei": "KG",
+    "base_price": 254.71
+  },
+  {
+    "matnr": "MAT034",
+    "maktx": "Into Himself SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 20.23,
+    "gewei": "KG",
+    "base_price": 1838.81
+  },
+  {
+    "matnr": "MAT035",
+    "maktx": "Must Suddenly SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 9.29,
+    "gewei": "KG",
+    "base_price": 710.77
+  },
+  {
+    "matnr": "MAT036",
+    "maktx": "So Respond SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 9.98,
+    "gewei": "KG",
+    "base_price": 98.41
+  },
+  {
+    "matnr": "MAT037",
+    "maktx": "Collection Allow SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 22.69,
+    "gewei": "KG",
+    "base_price": 649.69
+  },
+  {
+    "matnr": "MAT038",
+    "maktx": "Character Time RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 30.12,
+    "gewei": "KG",
+    "base_price": 13.58
+  },
+  {
+    "matnr": "MAT039",
+    "maktx": "Political Resource SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 35.3,
+    "gewei": "KG",
+    "base_price": 1285.85
+  },
+  {
+    "matnr": "MAT040",
+    "maktx": "Station Left FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 49.1,
+    "gewei": "KG",
+    "base_price": 3139.75
+  },
+  {
+    "matnr": "MAT041",
+    "maktx": "Already Card RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 38.19,
+    "gewei": "KG",
+    "base_price": 452.63
+  },
+  {
+    "matnr": "MAT042",
+    "maktx": "Audience Eat SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 36.17,
+    "gewei": "KG",
+    "base_price": 1928.26
+  },
+  {
+    "matnr": "MAT043",
+    "maktx": "Start Quite SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 43.41,
+    "gewei": "KG",
+    "base_price": 272.5
+  },
+  {
+    "matnr": "MAT044",
+    "maktx": "Hit High RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 36.75,
+    "gewei": "KG",
+    "base_price": 225.64
+  },
+  {
+    "matnr": "MAT045",
+    "maktx": "Identify Our SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 32.88,
+    "gewei": "KG",
+    "base_price": 1941.14
+  },
+  {
+    "matnr": "MAT046",
+    "maktx": "Alone Point SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 49.24,
+    "gewei": "KG",
+    "base_price": 612.05
+  },
+  {
+    "matnr": "MAT047",
+    "maktx": "Class Respond RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 37.62,
+    "gewei": "KG",
+    "base_price": 179.78
+  },
+  {
+    "matnr": "MAT048",
+    "maktx": "Listen Hospital RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 6.63,
+    "gewei": "KG",
+    "base_price": 30.06
+  },
+  {
+    "matnr": "MAT049",
+    "maktx": "Hot Life SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 24.74,
+    "gewei": "KG",
+    "base_price": 1971.8
+  },
+  {
+    "matnr": "MAT050",
+    "maktx": "Source Ball RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 23.52,
+    "gewei": "KG",
+    "base_price": 489.18
+  },
+  {
+    "matnr": "MAT051",
+    "maktx": "Painting Certain FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 39.79,
+    "gewei": "KG",
+    "base_price": 515.61
+  },
+  {
+    "matnr": "MAT052",
+    "maktx": "Next Hit SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 28.0,
+    "gewei": "KG",
+    "base_price": 1614.02
+  },
+  {
+    "matnr": "MAT053",
+    "maktx": "Information Former FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 41.22,
+    "gewei": "KG",
+    "base_price": 281.16
+  },
+  {
+    "matnr": "MAT054",
+    "maktx": "Rate Family RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 18.95,
+    "gewei": "KG",
+    "base_price": 33.86
+  },
+  {
+    "matnr": "MAT055",
+    "maktx": "Enjoy Build SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 33.93,
+    "gewei": "KG",
+    "base_price": 1440.85
+  },
+  {
+    "matnr": "MAT056",
+    "maktx": "Agree Simply FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 38.8,
+    "gewei": "KG",
+    "base_price": 4340.74
+  },
+  {
+    "matnr": "MAT057",
+    "maktx": "Cultural Money RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 40.14,
+    "gewei": "KG",
+    "base_price": 33.99
+  },
+  {
+    "matnr": "MAT058",
+    "maktx": "National Impact RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 12.11,
+    "gewei": "KG",
+    "base_price": 314.73
+  },
+  {
+    "matnr": "MAT059",
+    "maktx": "White Or FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 0.72,
+    "gewei": "KG",
+    "base_price": 2621.68
+  },
+  {
+    "matnr": "MAT060",
+    "maktx": "Buy Everybody RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 34.03,
+    "gewei": "KG",
+    "base_price": 24.51
+  },
+  {
+    "matnr": "MAT061",
+    "maktx": "Stage Ever RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 44.83,
+    "gewei": "KG",
+    "base_price": 339.09
+  },
+  {
+    "matnr": "MAT062",
+    "maktx": "Score Like SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 12.26,
+    "gewei": "KG",
+    "base_price": 1712.92
+  },
+  {
+    "matnr": "MAT063",
+    "maktx": "Difficult Population SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 42.74,
+    "gewei": "KG",
+    "base_price": 632.94
+  },
+  {
+    "matnr": "MAT064",
+    "maktx": "Feeling Rule SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 29.72,
+    "gewei": "KG",
+    "base_price": 824.03
+  },
+  {
+    "matnr": "MAT065",
+    "maktx": "Whom Military FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 44.38,
+    "gewei": "KG",
+    "base_price": 1019.21
+  },
+  {
+    "matnr": "MAT066",
+    "maktx": "Decision Can FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 4.7,
+    "gewei": "KG",
+    "base_price": 1775.44
+  },
+  {
+    "matnr": "MAT067",
+    "maktx": "Central Tonight SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 40.47,
+    "gewei": "KG",
+    "base_price": 1997.55
+  },
+  {
+    "matnr": "MAT068",
+    "maktx": "Back Live RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 15.17,
+    "gewei": "KG",
+    "base_price": 209.89
+  },
+  {
+    "matnr": "MAT069",
+    "maktx": "Consider Way SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 28.96,
+    "gewei": "KG",
+    "base_price": 1995.28
+  },
+  {
+    "matnr": "MAT070",
+    "maktx": "Sell Light FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 35.19,
+    "gewei": "KG",
+    "base_price": 3016.54
+  },
+  {
+    "matnr": "MAT071",
+    "maktx": "Begin Take FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 45.81,
+    "gewei": "KG",
+    "base_price": 2534.89
+  },
+  {
+    "matnr": "MAT072",
+    "maktx": "Rest Through SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 7.15,
+    "gewei": "KG",
+    "base_price": 762.49
+  },
+  {
+    "matnr": "MAT073",
+    "maktx": "Front Region FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 10.5,
+    "gewei": "KG",
+    "base_price": 186.58
+  },
+  {
+    "matnr": "MAT074",
+    "maktx": "Hand Security FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 22.94,
+    "gewei": "KG",
+    "base_price": 3209.25
+  },
+  {
+    "matnr": "MAT075",
+    "maktx": "Attention Oil RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 21.31,
+    "gewei": "KG",
+    "base_price": 480.01
+  },
+  {
+    "matnr": "MAT076",
+    "maktx": "Occur Fill SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 37.72,
+    "gewei": "KG",
+    "base_price": 1104.67
+  },
+  {
+    "matnr": "MAT077",
+    "maktx": "Vote First RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 44.9,
+    "gewei": "KG",
+    "base_price": 125.2
+  },
+  {
+    "matnr": "MAT078",
+    "maktx": "Today Coach FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 16.6,
+    "gewei": "KG",
+    "base_price": 4554.42
+  },
+  {
+    "matnr": "MAT079",
+    "maktx": "Seek Security FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 37.24,
+    "gewei": "KG",
+    "base_price": 2994.65
+  },
+  {
+    "matnr": "MAT080",
+    "maktx": "Within School SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 32.85,
+    "gewei": "KG",
+    "base_price": 633.8
+  },
+  {
+    "matnr": "MAT081",
+    "maktx": "Pull Contain RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 16.46,
+    "gewei": "KG",
+    "base_price": 86.17
+  },
+  {
+    "matnr": "MAT082",
+    "maktx": "Student High FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 43.78,
+    "gewei": "KG",
+    "base_price": 1487.91
+  },
+  {
+    "matnr": "MAT083",
+    "maktx": "Movie Door FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 39.7,
+    "gewei": "KG",
+    "base_price": 3940.74
+  },
+  {
+    "matnr": "MAT084",
+    "maktx": "Campaign Deep SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 22.2,
+    "gewei": "KG",
+    "base_price": 978.7
+  },
+  {
+    "matnr": "MAT085",
+    "maktx": "Structure Chair RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 33.89,
+    "gewei": "KG",
+    "base_price": 409.17
+  },
+  {
+    "matnr": "MAT086",
+    "maktx": "Economic Street RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 45.18,
+    "gewei": "KG",
+    "base_price": 395.92
+  },
+  {
+    "matnr": "MAT087",
+    "maktx": "Minute Agree SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 28.33,
+    "gewei": "KG",
+    "base_price": 248.69
+  },
+  {
+    "matnr": "MAT088",
+    "maktx": "Herself Once FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 32.82,
+    "gewei": "KG",
+    "base_price": 4781.21
+  },
+  {
+    "matnr": "MAT089",
+    "maktx": "Page Home RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 21.93,
+    "gewei": "KG",
+    "base_price": 27.56
+  },
+  {
+    "matnr": "MAT090",
+    "maktx": "Manage Suggest SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 48.01,
+    "gewei": "KG",
+    "base_price": 250.86
+  },
+  {
+    "matnr": "MAT091",
+    "maktx": "Ok Carry FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 12.68,
+    "gewei": "KG",
+    "base_price": 421.1
+  },
+  {
+    "matnr": "MAT092",
+    "maktx": "Population Usually FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 23.03,
+    "gewei": "KG",
+    "base_price": 2628.83
+  },
+  {
+    "matnr": "MAT093",
+    "maktx": "Before Attorney RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 3.02,
+    "gewei": "KG",
+    "base_price": 64.68
+  },
+  {
+    "matnr": "MAT094",
+    "maktx": "For Information FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 19.53,
+    "gewei": "KG",
+    "base_price": 396.59
+  },
+  {
+    "matnr": "MAT095",
+    "maktx": "Series Serve RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 10.75,
+    "gewei": "KG",
+    "base_price": 158.02
+  },
+  {
+    "matnr": "MAT096",
+    "maktx": "Measure Never RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 20.01,
+    "gewei": "KG",
+    "base_price": 214.14
+  },
+  {
+    "matnr": "MAT097",
+    "maktx": "Item Specific FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 6.05,
+    "gewei": "KG",
+    "base_price": 4327.55
+  },
+  {
+    "matnr": "MAT098",
+    "maktx": "It Than FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 0.56,
+    "gewei": "KG",
+    "base_price": 2590.02
+  },
+  {
+    "matnr": "MAT099",
+    "maktx": "Paper Back FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 16.99,
+    "gewei": "KG",
+    "base_price": 2213.5
+  },
+  {
+    "matnr": "MAT100",
+    "maktx": "Car Free SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 39.14,
+    "gewei": "KG",
+    "base_price": 1690.35
+  },
+  {
+    "matnr": "MAT101",
+    "maktx": "Quality Back SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 16.46,
+    "gewei": "KG",
+    "base_price": 522.84
+  },
+  {
+    "matnr": "MAT102",
+    "maktx": "Listen Man FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 24.25,
+    "gewei": "KG",
+    "base_price": 3447.97
+  },
+  {
+    "matnr": "MAT103",
+    "maktx": "Response Nation SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 16.87,
+    "gewei": "KG",
+    "base_price": 1864.25
+  },
+  {
+    "matnr": "MAT104",
+    "maktx": "Guy Career FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 2.9,
+    "gewei": "KG",
+    "base_price": 2357.77
+  },
+  {
+    "matnr": "MAT105",
+    "maktx": "Unit Them RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 7.95,
+    "gewei": "KG",
+    "base_price": 33.21
+  },
+  {
+    "matnr": "MAT106",
+    "maktx": "State Ok RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 7.34,
+    "gewei": "KG",
+    "base_price": 460.22
+  },
+  {
+    "matnr": "MAT107",
+    "maktx": "Push People FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 9.82,
+    "gewei": "KG",
+    "base_price": 253.29
+  },
+  {
+    "matnr": "MAT108",
+    "maktx": "Court Special FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 5.98,
+    "gewei": "KG",
+    "base_price": 3138.73
+  },
+  {
+    "matnr": "MAT109",
+    "maktx": "Carry Lead SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 28.68,
+    "gewei": "KG",
+    "base_price": 1200.88
+  },
+  {
+    "matnr": "MAT110",
+    "maktx": "Morning Whether FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 42.55,
+    "gewei": "KG",
+    "base_price": 123.23
+  },
+  {
+    "matnr": "MAT111",
+    "maktx": "Trouble Around FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 31.15,
+    "gewei": "KG",
+    "base_price": 897.44
+  },
+  {
+    "matnr": "MAT112",
+    "maktx": "Theory Capital RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 38.76,
+    "gewei": "KG",
+    "base_price": 429.19
+  },
+  {
+    "matnr": "MAT113",
+    "maktx": "National Claim FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 45.98,
+    "gewei": "KG",
+    "base_price": 2326.84
+  },
+  {
+    "matnr": "MAT114",
+    "maktx": "Fly Community FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 30.37,
+    "gewei": "KG",
+    "base_price": 4924.78
+  },
+  {
+    "matnr": "MAT115",
+    "maktx": "Color Future FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 40.75,
+    "gewei": "KG",
+    "base_price": 1660.16
+  },
+  {
+    "matnr": "MAT116",
+    "maktx": "Worry Security SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 40.06,
+    "gewei": "KG",
+    "base_price": 1221.43
+  },
+  {
+    "matnr": "MAT117",
+    "maktx": "Down Half FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 20.99,
+    "gewei": "KG",
+    "base_price": 1656.41
+  },
+  {
+    "matnr": "MAT118",
+    "maktx": "Yourself Yeah FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 4.37,
+    "gewei": "KG",
+    "base_price": 246.19
+  },
+  {
+    "matnr": "MAT119",
+    "maktx": "Natural Want RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 1.44,
+    "gewei": "KG",
+    "base_price": 91.09
+  },
+  {
+    "matnr": "MAT120",
+    "maktx": "Federal Throughout SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 36.4,
+    "gewei": "KG",
+    "base_price": 1430.78
+  },
+  {
+    "matnr": "MAT121",
+    "maktx": "Bar Enough FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 16.2,
+    "gewei": "KG",
+    "base_price": 4461.1
+  },
+  {
+    "matnr": "MAT122",
+    "maktx": "Debate Prove RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 29.89,
+    "gewei": "KG",
+    "base_price": 71.75
+  },
+  {
+    "matnr": "MAT123",
+    "maktx": "Ok Face RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 34.81,
+    "gewei": "KG",
+    "base_price": 94.74
+  },
+  {
+    "matnr": "MAT124",
+    "maktx": "Car Process FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 25.61,
+    "gewei": "KG",
+    "base_price": 4959.69
+  },
+  {
+    "matnr": "MAT125",
+    "maktx": "Floor Possible FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 1.32,
+    "gewei": "KG",
+    "base_price": 4966.11
+  },
+  {
+    "matnr": "MAT126",
+    "maktx": "None Better FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 29.44,
+    "gewei": "KG",
+    "base_price": 721.86
+  },
+  {
+    "matnr": "MAT127",
+    "maktx": "Morning Put SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 44.08,
+    "gewei": "KG",
+    "base_price": 1095.59
+  },
+  {
+    "matnr": "MAT128",
+    "maktx": "Concern Person RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 31.28,
+    "gewei": "KG",
+    "base_price": 143.86
+  },
+  {
+    "matnr": "MAT129",
+    "maktx": "Year Partner RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 29.93,
+    "gewei": "KG",
+    "base_price": 154.43
+  },
+  {
+    "matnr": "MAT130",
+    "maktx": "Class Congress FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 33.35,
+    "gewei": "KG",
+    "base_price": 4197.6
+  },
+  {
+    "matnr": "MAT131",
+    "maktx": "Reason Probably FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 29.99,
+    "gewei": "KG",
+    "base_price": 1233.27
+  },
+  {
+    "matnr": "MAT132",
+    "maktx": "Service Week FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 43.76,
+    "gewei": "KG",
+    "base_price": 1342.96
+  },
+  {
+    "matnr": "MAT133",
+    "maktx": "Point Green SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 27.9,
+    "gewei": "KG",
+    "base_price": 822.52
+  },
+  {
+    "matnr": "MAT134",
+    "maktx": "Thousand Window SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 34.04,
+    "gewei": "KG",
+    "base_price": 1465.25
+  },
+  {
+    "matnr": "MAT135",
+    "maktx": "Organization Analysis RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 38.04,
+    "gewei": "KG",
+    "base_price": 491.87
+  },
+  {
+    "matnr": "MAT136",
+    "maktx": "That Treat SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 21.25,
+    "gewei": "KG",
+    "base_price": 1053.44
+  },
+  {
+    "matnr": "MAT137",
+    "maktx": "Air Beat RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 39.9,
+    "gewei": "KG",
+    "base_price": 264.91
+  },
+  {
+    "matnr": "MAT138",
+    "maktx": "Answer Put FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 20.69,
+    "gewei": "KG",
+    "base_price": 560.95
+  },
+  {
+    "matnr": "MAT139",
+    "maktx": "Spend Part RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 20.05,
+    "gewei": "KG",
+    "base_price": 344.46
+  },
+  {
+    "matnr": "MAT140",
+    "maktx": "Evidence Rather RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 7.89,
+    "gewei": "KG",
+    "base_price": 481.16
+  },
+  {
+    "matnr": "MAT141",
+    "maktx": "Develop Speak FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 10.38,
+    "gewei": "KG",
+    "base_price": 4309.02
+  },
+  {
+    "matnr": "MAT142",
+    "maktx": "Owner Keep FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 45.67,
+    "gewei": "KG",
+    "base_price": 1139.52
+  },
+  {
+    "matnr": "MAT143",
+    "maktx": "Prepare Purpose SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 36.81,
+    "gewei": "KG",
+    "base_price": 1762.81
+  },
+  {
+    "matnr": "MAT144",
+    "maktx": "Allow Modern SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 19.26,
+    "gewei": "KG",
+    "base_price": 1058.19
+  },
+  {
+    "matnr": "MAT145",
+    "maktx": "Visit Product FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 36.69,
+    "gewei": "KG",
+    "base_price": 3936.5
+  },
+  {
+    "matnr": "MAT146",
+    "maktx": "Offer Figure RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 28.71,
+    "gewei": "KG",
+    "base_price": 61.26
+  },
+  {
+    "matnr": "MAT147",
+    "maktx": "Quality Five RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 43.35,
+    "gewei": "KG",
+    "base_price": 401.07
+  },
+  {
+    "matnr": "MAT148",
+    "maktx": "Meeting Election RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 5.44,
+    "gewei": "KG",
+    "base_price": 110.15
+  },
+  {
+    "matnr": "MAT149",
+    "maktx": "Support Surface SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 1.65,
+    "gewei": "KG",
+    "base_price": 1959.49
+  },
+  {
+    "matnr": "MAT150",
+    "maktx": "Reveal Into RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 19.17,
+    "gewei": "KG",
+    "base_price": 362.46
+  },
+  {
+    "matnr": "MAT151",
+    "maktx": "Finish Long RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 20.03,
+    "gewei": "KG",
+    "base_price": 166.37
+  },
+  {
+    "matnr": "MAT152",
+    "maktx": "Baby Risk RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 30.63,
+    "gewei": "KG",
+    "base_price": 294.68
+  },
+  {
+    "matnr": "MAT153",
+    "maktx": "As Coach SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 30.29,
+    "gewei": "KG",
+    "base_price": 1873.99
+  },
+  {
+    "matnr": "MAT154",
+    "maktx": "Less Just SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 23.65,
+    "gewei": "KG",
+    "base_price": 433.65
+  },
+  {
+    "matnr": "MAT155",
+    "maktx": "Member Majority SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 20.01,
+    "gewei": "KG",
+    "base_price": 305.66
+  },
+  {
+    "matnr": "MAT156",
+    "maktx": "Democrat Grow SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 8.56,
+    "gewei": "KG",
+    "base_price": 1384.9
+  },
+  {
+    "matnr": "MAT157",
+    "maktx": "Policy Charge FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 47.77,
+    "gewei": "KG",
+    "base_price": 1293.62
+  },
+  {
+    "matnr": "MAT158",
+    "maktx": "Form Training SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 5.4,
+    "gewei": "KG",
+    "base_price": 1519.33
+  },
+  {
+    "matnr": "MAT159",
+    "maktx": "Serious From SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 14.27,
+    "gewei": "KG",
+    "base_price": 444.07
+  },
+  {
+    "matnr": "MAT160",
+    "maktx": "Similar Traditional RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 9.7,
+    "gewei": "KG",
+    "base_price": 265.79
+  },
+  {
+    "matnr": "MAT161",
+    "maktx": "Hair Inside FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 13.34,
+    "gewei": "KG",
+    "base_price": 321.35
+  },
+  {
+    "matnr": "MAT162",
+    "maktx": "Case Soon SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 24.33,
+    "gewei": "KG",
+    "base_price": 1920.7
+  },
+  {
+    "matnr": "MAT163",
+    "maktx": "Hospital Myself FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 25.03,
+    "gewei": "KG",
+    "base_price": 642.39
+  },
+  {
+    "matnr": "MAT164",
+    "maktx": "Or Born SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 13.0,
+    "gewei": "KG",
+    "base_price": 624.81
+  },
+  {
+    "matnr": "MAT165",
+    "maktx": "From Effort FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 43.9,
+    "gewei": "KG",
+    "base_price": 4518.05
+  },
+  {
+    "matnr": "MAT166",
+    "maktx": "Man Can RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 49.24,
+    "gewei": "KG",
+    "base_price": 491.36
+  },
+  {
+    "matnr": "MAT167",
+    "maktx": "Example Listen SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 4.06,
+    "gewei": "KG",
+    "base_price": 318.7
+  },
+  {
+    "matnr": "MAT168",
+    "maktx": "End Chance RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 15.57,
+    "gewei": "KG",
+    "base_price": 280.92
+  },
+  {
+    "matnr": "MAT169",
+    "maktx": "Bill Apply SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 42.37,
+    "gewei": "KG",
+    "base_price": 1252.67
+  },
+  {
+    "matnr": "MAT170",
+    "maktx": "Fill Young FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 27.35,
+    "gewei": "KG",
+    "base_price": 910.03
+  },
+  {
+    "matnr": "MAT171",
+    "maktx": "If Treat FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 8.44,
+    "gewei": "KG",
+    "base_price": 4274.47
+  },
+  {
+    "matnr": "MAT172",
+    "maktx": "Power Kid FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 29.42,
+    "gewei": "KG",
+    "base_price": 3702.13
+  },
+  {
+    "matnr": "MAT173",
+    "maktx": "Energy Tree RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 18.88,
+    "gewei": "KG",
+    "base_price": 208.38
+  },
+  {
+    "matnr": "MAT174",
+    "maktx": "Week Collection FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 38.12,
+    "gewei": "KG",
+    "base_price": 3884.53
+  },
+  {
+    "matnr": "MAT175",
+    "maktx": "Teach Generation FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 47.11,
+    "gewei": "KG",
+    "base_price": 691.21
+  },
+  {
+    "matnr": "MAT176",
+    "maktx": "World Participant FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 44.86,
+    "gewei": "KG",
+    "base_price": 591.94
+  },
+  {
+    "matnr": "MAT177",
+    "maktx": "Set Form SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 42.4,
+    "gewei": "KG",
+    "base_price": 400.01
+  },
+  {
+    "matnr": "MAT178",
+    "maktx": "Customer Source FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 20.97,
+    "gewei": "KG",
+    "base_price": 2304.31
+  },
+  {
+    "matnr": "MAT179",
+    "maktx": "Collection Moment FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 35.66,
+    "gewei": "KG",
+    "base_price": 4271.54
+  },
+  {
+    "matnr": "MAT180",
+    "maktx": "Myself Manage FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 43.79,
+    "gewei": "KG",
+    "base_price": 1762.68
+  },
+  {
+    "matnr": "MAT181",
+    "maktx": "Moment Until SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 12.8,
+    "gewei": "KG",
+    "base_price": 527.35
+  },
+  {
+    "matnr": "MAT182",
+    "maktx": "Foot Modern SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 8.48,
+    "gewei": "KG",
+    "base_price": 1883.04
+  },
+  {
+    "matnr": "MAT183",
+    "maktx": "Agency Believe FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 38.98,
+    "gewei": "KG",
+    "base_price": 2636.54
+  },
+  {
+    "matnr": "MAT184",
+    "maktx": "You Increase RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 24.79,
+    "gewei": "KG",
+    "base_price": 269.58
+  },
+  {
+    "matnr": "MAT185",
+    "maktx": "Mouth Lot SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 22.01,
+    "gewei": "KG",
+    "base_price": 306.92
+  },
+  {
+    "matnr": "MAT186",
+    "maktx": "Effect Dinner SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 6.72,
+    "gewei": "KG",
+    "base_price": 1906.89
+  },
+  {
+    "matnr": "MAT187",
+    "maktx": "Past Head FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 47.68,
+    "gewei": "KG",
+    "base_price": 901.53
+  },
+  {
+    "matnr": "MAT188",
+    "maktx": "Anything Apply SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 27.94,
+    "gewei": "KG",
+    "base_price": 455.05
+  },
+  {
+    "matnr": "MAT189",
+    "maktx": "Father Miss FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 1.99,
+    "gewei": "KG",
+    "base_price": 682.87
+  },
+  {
+    "matnr": "MAT190",
+    "maktx": "Picture Us FINISHED",
+    "mtart": "FINISHED",
+    "meins": "EA",
+    "brgew": 45.88,
+    "gewei": "KG",
+    "base_price": 1675.51
+  },
+  {
+    "matnr": "MAT191",
+    "maktx": "Threat Ready RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 23.52,
+    "gewei": "KG",
+    "base_price": 206.22
+  },
+  {
+    "matnr": "MAT192",
+    "maktx": "Remember Many SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 26.83,
+    "gewei": "KG",
+    "base_price": 415.12
+  },
+  {
+    "matnr": "MAT193",
+    "maktx": "Feeling Not RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 41.01,
+    "gewei": "KG",
+    "base_price": 373.39
+  },
+  {
+    "matnr": "MAT194",
+    "maktx": "Across Throw RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 23.7,
+    "gewei": "KG",
+    "base_price": 84.91
+  },
+  {
+    "matnr": "MAT195",
+    "maktx": "Box Lawyer RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 17.4,
+    "gewei": "KG",
+    "base_price": 34.55
+  },
+  {
+    "matnr": "MAT196",
+    "maktx": "Center Us RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "brgew": 17.45,
+    "gewei": "KG",
+    "base_price": 399.28
+  },
+  {
+    "matnr": "MAT197",
+    "maktx": "Everything Short SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 37.67,
+    "gewei": "KG",
+    "base_price": 1597.59
+  },
+  {
+    "matnr": "MAT198",
+    "maktx": "History South SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 10.99,
+    "gewei": "KG",
+    "base_price": 1851.38
+  },
+  {
+    "matnr": "MAT199",
+    "maktx": "Interesting History SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 32.13,
+    "gewei": "KG",
+    "base_price": 54.5
+  },
+  {
+    "matnr": "MAT200",
+    "maktx": "Answer Institution SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "brgew": 49.67,
+    "gewei": "KG",
+    "base_price": 597.75
+  }
+]

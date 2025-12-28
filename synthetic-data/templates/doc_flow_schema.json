@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SAP Document Flow (VBFA)",
+  "description": "Schema for synthetic SAP document flow records linking orders, deliveries, and invoices",
+  "type": "object",
+  "required": ["vbelv", "posnv", "vbtyp_v", "vbeln", "posnn", "vbtyp_n", "rfmng", "erdat"],
+  "properties": {
+    "vbelv": {
+      "type": "string",
+      "description": "Preceding document number",
+      "pattern": "^[0-9]{10}$",
+      "examples": ["0000012345"]
+    },
+    "posnv": {
+      "type": "string",
+      "description": "Preceding document item",
+      "pattern": "^[0-9]{6}$",
+      "examples": ["000010"]
+    },
+    "vbtyp_v": {
+      "type": "string",
+      "description": "Preceding document category (C=Order, J=Delivery, M=Invoice)",
+      "enum": ["C", "J", "M", "H", "K"],
+      "examples": ["C"]
+    },
+    "vbeln": {
+      "type": "string",
+      "description": "Subsequent document number",
+      "pattern": "^[0-9]{10}$",
+      "examples": ["8000000001"]
+    },
+    "posnn": {
+      "type": "string",
+      "description": "Subsequent document item",
+      "pattern": "^[0-9]{6}$",
+      "examples": ["000010"]
+    },
+    "vbtyp_n": {
+      "type": "string",
+      "description": "Subsequent document category",
+      "enum": ["C", "J", "M", "H", "K"],
+      "examples": ["J"]
+    },
+    "rfmng": {
+      "type": "number",
+      "description": "Transferred quantity",
+      "minimum": 0,
+      "examples": [100]
+    },
+    "erdat": {
+      "type": "string",
+      "format": "date",
+      "description": "Creation date of flow record",
+      "examples": ["2024-01-16"]
+    }
+  }
+}

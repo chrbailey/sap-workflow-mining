@@ -1,0 +1,4002 @@
+[
+  {
+    "kunnr": "CUST0001",
+    "name1": "Rodriguez, Figueroa and Sanchez",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0002",
+    "name1": "Doyle Ltd",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0003",
+    "name1": "Mcclain, Miller and Henderson",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0004",
+    "name1": "Davis and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0005",
+    "name1": "Guzman, Hoffman and Baldwin",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0006",
+    "name1": "Gardner, Robinson and Lawrence",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0007",
+    "name1": "Blake and Sons",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0008",
+    "name1": "Henderson, Ramirez and Lewis",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0009",
+    "name1": "Garcia-James",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0010",
+    "name1": "Abbott-Munoz",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0011",
+    "name1": "Blair PLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0012",
+    "name1": "Dudley Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0013",
+    "name1": "Arnold Ltd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0014",
+    "name1": "Mcclure, Ward and Lee",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0015",
+    "name1": "Williams and Sons",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0016",
+    "name1": "Galloway-Wyatt",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0017",
+    "name1": "James Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0018",
+    "name1": "Flowers, Martin and Kelly",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0019",
+    "name1": "Adams, Zuniga and Wong",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0020",
+    "name1": "Reid, Ferguson and Sanchez",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0021",
+    "name1": "Gray-Mayo",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0022",
+    "name1": "Watts, Robinson and Nguyen",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0023",
+    "name1": "Perez Inc",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0024",
+    "name1": "Morales-Jones",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0025",
+    "name1": "Walter, Edwards and Rios",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0026",
+    "name1": "Wilkerson-Day",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0027",
+    "name1": "Baker and Sons",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0028",
+    "name1": "Hoffman, Baker and Richards",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0029",
+    "name1": "Ross, Robinson and Bright",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0030",
+    "name1": "Snyder, Campos and Callahan",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0031",
+    "name1": "Burton Ltd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0032",
+    "name1": "Carlson-Cruz",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0033",
+    "name1": "Ferrell, Rice and Maddox",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0034",
+    "name1": "Frazier Inc",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0035",
+    "name1": "Dyer, Potter and Mack",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0036",
+    "name1": "Rodriguez-Graham",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0037",
+    "name1": "Smith-Bowen",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0038",
+    "name1": "Baker, Mason and White",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0039",
+    "name1": "Harrell LLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0040",
+    "name1": "Romero, Gonzalez and Brooks",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0041",
+    "name1": "Ryan PLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0042",
+    "name1": "George Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0043",
+    "name1": "Rodriguez LLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0044",
+    "name1": "Allen-Allen",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0045",
+    "name1": "Arroyo, Miller and Tucker",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0046",
+    "name1": "Spence PLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0047",
+    "name1": "Anderson Group",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0048",
+    "name1": "Martin, Rose and Obrien",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0049",
+    "name1": "Hickman Ltd",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0050",
+    "name1": "Harris, Collins and Carney",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0051",
+    "name1": "Brooks, Lam and Hayes",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0052",
+    "name1": "Walker LLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0053",
+    "name1": "Chapman and Sons",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0054",
+    "name1": "Robinson, Jones and Welch",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0055",
+    "name1": "Jones Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0056",
+    "name1": "Jones-Young",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0057",
+    "name1": "Washington, Ryan and Cummings",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0058",
+    "name1": "Johnston, Sanchez and Kennedy",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0059",
+    "name1": "Lee-Davis",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0060",
+    "name1": "Gomez-Jenkins",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0061",
+    "name1": "Brown, Valdez and Lucas",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0062",
+    "name1": "Powell LLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0063",
+    "name1": "Wright and Sons",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0064",
+    "name1": "West, Henderson and Ramirez",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0065",
+    "name1": "Baxter Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0066",
+    "name1": "Morton-Chase",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0067",
+    "name1": "Williams PLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0068",
+    "name1": "Novak and Sons",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0069",
+    "name1": "Russell Group",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0070",
+    "name1": "Hancock Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0071",
+    "name1": "Gray Group",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0072",
+    "name1": "House-Glover",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0073",
+    "name1": "Henderson-Bernard",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0074",
+    "name1": "Stanley, Tucker and Lee",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0075",
+    "name1": "Novak PLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0076",
+    "name1": "Daniels, Adkins and Brown",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0077",
+    "name1": "Woods, Calhoun and Schmidt",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0078",
+    "name1": "Yu Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0079",
+    "name1": "Jones Inc",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0080",
+    "name1": "Hensley, Powell and David",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0081",
+    "name1": "Sanchez, Wheeler and Harvey",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0082",
+    "name1": "Sandoval-Cunningham",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0083",
+    "name1": "Donovan-Harris",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0084",
+    "name1": "Edwards, Baker and Anderson",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0085",
+    "name1": "Evans, Stewart and Walton",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0086",
+    "name1": "Smith PLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0087",
+    "name1": "Ferrell, Jones and Lewis",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0088",
+    "name1": "Anderson-Bailey",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0089",
+    "name1": "Suarez LLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0090",
+    "name1": "Moore-Bass",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0091",
+    "name1": "Turner, Riggs and Roman",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0092",
+    "name1": "Smith, Montoya and Evans",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0093",
+    "name1": "Garcia, Humphrey and Baker",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0094",
+    "name1": "Newton and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0095",
+    "name1": "Campbell-Clark",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0096",
+    "name1": "Harris-Walters",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0097",
+    "name1": "Wagner-King",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0098",
+    "name1": "Davis Group",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0099",
+    "name1": "Williams-Cook",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0100",
+    "name1": "Walsh LLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0101",
+    "name1": "Figueroa PLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0102",
+    "name1": "Patterson, Smith and Jones",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0103",
+    "name1": "Mckee, Gardner and Davenport",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0104",
+    "name1": "Tran, Jordan and Williams",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0105",
+    "name1": "Nolan-Flynn",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0106",
+    "name1": "Nolan and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0107",
+    "name1": "Wright, Garcia and Deleon",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0108",
+    "name1": "Dickson-Brady",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0109",
+    "name1": "Hancock and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0110",
+    "name1": "Johnson-Doyle",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0111",
+    "name1": "Patton-Jenkins",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0112",
+    "name1": "Shields, Cochran and Adams",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0113",
+    "name1": "Rodriguez, Brennan and Garrison",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0114",
+    "name1": "Gonzalez Group",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0115",
+    "name1": "Torres-Pope",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0116",
+    "name1": "Walker Ltd",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0117",
+    "name1": "Ross LLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0118",
+    "name1": "Rasmussen LLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0119",
+    "name1": "May-Ross",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0120",
+    "name1": "Rivera, Johnson and Wiley",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0121",
+    "name1": "White-Estes",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0122",
+    "name1": "Johnson-Carlson",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0123",
+    "name1": "Chandler-Edwards",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0124",
+    "name1": "Joyce, Wilson and Lam",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0125",
+    "name1": "Scott Ltd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0126",
+    "name1": "Smith-Frost",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0127",
+    "name1": "Mcdaniel, Bentley and Mclaughlin",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0128",
+    "name1": "Diaz Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0129",
+    "name1": "Mccall, Hanson and Alvarado",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0130",
+    "name1": "Cortez LLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0131",
+    "name1": "Parker, Ortiz and Powell",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0132",
+    "name1": "Spencer-Lee",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0133",
+    "name1": "Bentley, Byrd and Orr",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0134",
+    "name1": "Carroll, Sullivan and Bass",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0135",
+    "name1": "Mitchell-Jordan",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0136",
+    "name1": "Lawson, Morris and Ramos",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0137",
+    "name1": "Lewis, Kennedy and Santana",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0138",
+    "name1": "Jackson, Miller and Robertson",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0139",
+    "name1": "Harvey, Davis and Crane",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0140",
+    "name1": "Chambers and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0141",
+    "name1": "Hernandez Inc",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0142",
+    "name1": "Riggs PLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0143",
+    "name1": "Gibson Ltd",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0144",
+    "name1": "Lee, Horton and Snyder",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0145",
+    "name1": "Hernandez Ltd",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0146",
+    "name1": "Stafford Inc",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0147",
+    "name1": "Robinson-Brock",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0148",
+    "name1": "Holmes, Williams and Wright",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0149",
+    "name1": "Bryant Group",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0150",
+    "name1": "Schmidt, Hansen and Stewart",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0151",
+    "name1": "Salazar-Ball",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0152",
+    "name1": "Simmons, Meadows and Griffin",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0153",
+    "name1": "Manning Group",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0154",
+    "name1": "Green-Wright",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0155",
+    "name1": "Ramirez, Strickland and Washington",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0156",
+    "name1": "Hill Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0157",
+    "name1": "Mitchell, Nelson and Flores",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0158",
+    "name1": "Miller, Hernandez and Reyes",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0159",
+    "name1": "Mccarthy Inc",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0160",
+    "name1": "Russell-Daniels",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0161",
+    "name1": "Brown-Wall",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0162",
+    "name1": "Stein-Silva",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0163",
+    "name1": "Smith, Gilmore and Johnston",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0164",
+    "name1": "Smith-Bell",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0165",
+    "name1": "Castaneda-Ashley",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0166",
+    "name1": "Medina-Navarro",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0167",
+    "name1": "Hurst, Freeman and Nelson",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0168",
+    "name1": "Johnson-Rogers",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0169",
+    "name1": "Yates, Ramsey and Pittman",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0170",
+    "name1": "Hooper PLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0171",
+    "name1": "Meadows PLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0172",
+    "name1": "Alvarado, Miller and Patterson",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0173",
+    "name1": "White-Green",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0174",
+    "name1": "Lewis-Murphy",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0175",
+    "name1": "Ramirez-Bean",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0176",
+    "name1": "King-Miller",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0177",
+    "name1": "Curry Inc",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0178",
+    "name1": "Walker-Jones",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0179",
+    "name1": "Williams, Johnson and Wright",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0180",
+    "name1": "Howell and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0181",
+    "name1": "Wells Inc",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0182",
+    "name1": "Gould, Marshall and Scott",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0183",
+    "name1": "Jackson-Lawson",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0184",
+    "name1": "Higgins, Strickland and Martin",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0185",
+    "name1": "Rodriguez-Johnson",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0186",
+    "name1": "Johnston-Odonnell",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0187",
+    "name1": "Sanders-Espinoza",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0188",
+    "name1": "Vargas Ltd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0189",
+    "name1": "Garcia LLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0190",
+    "name1": "Burke, Martinez and Riggs",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0191",
+    "name1": "Reed Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0192",
+    "name1": "Wood, Hunter and Peterson",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0193",
+    "name1": "Short-Garcia",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0194",
+    "name1": "Reid-Poole",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0195",
+    "name1": "Hernandez, Thompson and Boyd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0196",
+    "name1": "Nelson, Morton and Medina",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0197",
+    "name1": "Marshall-Petersen",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0198",
+    "name1": "Adams, Christian and Rivas",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0199",
+    "name1": "Ramirez Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0200",
+    "name1": "Christensen PLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0201",
+    "name1": "Barnett, Rogers and Snyder",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0202",
+    "name1": "White-Lewis",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0203",
+    "name1": "Peterson-Beard",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0204",
+    "name1": "Beard, Peters and Black",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0205",
+    "name1": "Miller Ltd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0206",
+    "name1": "Freeman-Chang",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0207",
+    "name1": "Alvarez, Joseph and West",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0208",
+    "name1": "Davis and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0209",
+    "name1": "Holt-Torres",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0210",
+    "name1": "Wood, Tran and Cooper",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0211",
+    "name1": "Pierce, Bell and Chavez",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0212",
+    "name1": "King-Martinez",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0213",
+    "name1": "Stewart Ltd",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0214",
+    "name1": "Tapia, Vaughn and Lee",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0215",
+    "name1": "Washington, Hardy and Bray",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0216",
+    "name1": "Carlson, Hooper and Wall",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0217",
+    "name1": "Perez-White",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0218",
+    "name1": "Erickson and Sons",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0219",
+    "name1": "Williams-Brown",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0220",
+    "name1": "Terry-Martinez",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0221",
+    "name1": "Garcia-Smith",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0222",
+    "name1": "Harrison-Alexander",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0223",
+    "name1": "Sheppard LLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0224",
+    "name1": "Wilson-Jones",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0225",
+    "name1": "Jones-Soto",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0226",
+    "name1": "Hernandez PLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0227",
+    "name1": "Miller-Wright",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0228",
+    "name1": "Duran, Obrien and Gibbs",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0229",
+    "name1": "Rowe Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0230",
+    "name1": "Kerr-Evans",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0231",
+    "name1": "Branch, Torres and Oliver",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0232",
+    "name1": "Choi, Garcia and Farmer",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0233",
+    "name1": "Clark, Guerrero and Moore",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0234",
+    "name1": "Arnold and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0235",
+    "name1": "Ortiz Ltd",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0236",
+    "name1": "Harrison, Johnson and Roberts",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0237",
+    "name1": "Warner-Gibson",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0238",
+    "name1": "Hall, Baker and Moody",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0239",
+    "name1": "Guerrero, Peck and Coleman",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0240",
+    "name1": "Walker, Hernandez and Baker",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0241",
+    "name1": "Jones and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0242",
+    "name1": "Larson-Holloway",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0243",
+    "name1": "Gonzales-Harrison",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0244",
+    "name1": "Lyons-Bender",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0245",
+    "name1": "Fernandez, Kim and George",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0246",
+    "name1": "Navarro-Munoz",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0247",
+    "name1": "Davis Ltd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0248",
+    "name1": "Matthews, Smith and Hubbard",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0249",
+    "name1": "Johnston-Hines",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0250",
+    "name1": "Ruiz Ltd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0251",
+    "name1": "Moon-White",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0252",
+    "name1": "Graham, Olsen and Costa",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0253",
+    "name1": "Bailey-Cook",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0254",
+    "name1": "Garcia, Martin and Jenkins",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0255",
+    "name1": "Roberts-Landry",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0256",
+    "name1": "Johnson, Miller and King",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0257",
+    "name1": "Cordova Group",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0258",
+    "name1": "Bryan, Smith and Booth",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0259",
+    "name1": "Gutierrez-Lopez",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0260",
+    "name1": "Dean-Jimenez",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0261",
+    "name1": "Wolf-Harris",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0262",
+    "name1": "Anderson, Roberts and Gilmore",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0263",
+    "name1": "Martinez-Dudley",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0264",
+    "name1": "Lloyd, Mckinney and Collins",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0265",
+    "name1": "Tran Inc",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0266",
+    "name1": "Gay Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0267",
+    "name1": "Valentine-Holland",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0268",
+    "name1": "Jimenez Ltd",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0269",
+    "name1": "Hicks-Hill",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0270",
+    "name1": "Baird-Sanchez",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0271",
+    "name1": "Thomas, Lee and Greene",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0272",
+    "name1": "Suarez, Shields and Hill",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0273",
+    "name1": "Morgan-French",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0274",
+    "name1": "Hoover-Campbell",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0275",
+    "name1": "Monroe-Carpenter",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0276",
+    "name1": "Burns, Hernandez and Ryan",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0277",
+    "name1": "Cook-Hines",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0278",
+    "name1": "Gibson-Morris",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0279",
+    "name1": "Pollard and Sons",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0280",
+    "name1": "Reyes, Chase and Jenkins",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0281",
+    "name1": "Garner-Thornton",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0282",
+    "name1": "Hughes-Alvarado",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0283",
+    "name1": "Pollard, Simpson and Johnson",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0284",
+    "name1": "Sanford, Rivera and Garcia",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0285",
+    "name1": "Garcia-Lozano",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0286",
+    "name1": "Bowen Group",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0287",
+    "name1": "Booker, Jones and Harrington",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0288",
+    "name1": "Morgan-Schwartz",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0289",
+    "name1": "Miller, Murphy and Craig",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0290",
+    "name1": "James, Stewart and Higgins",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0291",
+    "name1": "Brennan-Johnson",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0292",
+    "name1": "Young Ltd",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0293",
+    "name1": "Bright-Francis",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0294",
+    "name1": "Good-Hodges",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0295",
+    "name1": "Brennan, Wallace and Benson",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0296",
+    "name1": "Williams Inc",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0297",
+    "name1": "Howard-Jordan",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0298",
+    "name1": "Schmidt PLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0299",
+    "name1": "Sparks, Jackson and Miller",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0300",
+    "name1": "Harvey-Allen",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0301",
+    "name1": "Thomas, Murray and King",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0302",
+    "name1": "Estrada-Nolan",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0303",
+    "name1": "Santana-Byrd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0304",
+    "name1": "Jones LLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0305",
+    "name1": "Evans, Hayden and Vaughn",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0306",
+    "name1": "Bruce-Gonzalez",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0307",
+    "name1": "Castaneda-Rodriguez",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0308",
+    "name1": "Armstrong-Andrews",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0309",
+    "name1": "Phillips, Spence and Barrett",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0310",
+    "name1": "Smith-Grimes",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0311",
+    "name1": "Beltran, Lozano and Mcgee",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0312",
+    "name1": "Parsons-Hall",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0313",
+    "name1": "Robinson-Lee",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0314",
+    "name1": "Byrd-Le",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0315",
+    "name1": "Becker, Taylor and Davis",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0316",
+    "name1": "Lucas, Parker and Alexander",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0317",
+    "name1": "Diaz, Anderson and Browning",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0318",
+    "name1": "Burgess-Thompson",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0319",
+    "name1": "Buchanan LLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0320",
+    "name1": "Shaw, Nelson and Martin",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0321",
+    "name1": "Coffey-Phillips",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0322",
+    "name1": "Brock-Mcdonald",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0323",
+    "name1": "Taylor and Sons",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0324",
+    "name1": "Ramsey, Whitney and Coffey",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0325",
+    "name1": "Diaz, Gibbs and Smith",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0326",
+    "name1": "Martinez, Richardson and Curry",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0327",
+    "name1": "Richards-Carson",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0328",
+    "name1": "Rodriguez-Hall",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0329",
+    "name1": "Harvey PLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0330",
+    "name1": "Herman-Walker",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0331",
+    "name1": "Reid Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0332",
+    "name1": "Turner, Ortiz and Taylor",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0333",
+    "name1": "Torres Group",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0334",
+    "name1": "Davis PLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0335",
+    "name1": "Price LLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0336",
+    "name1": "Avery, Horton and Fernandez",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0337",
+    "name1": "Newton, Moore and Perry",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0338",
+    "name1": "Bass PLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0339",
+    "name1": "Crosby-Ramirez",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0340",
+    "name1": "Wood, Ramos and Sampson",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0341",
+    "name1": "Garcia-Jennings",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0342",
+    "name1": "Winters, Newman and Brown",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0343",
+    "name1": "Lopez-Martinez",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0344",
+    "name1": "Davis-Lewis",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0345",
+    "name1": "Harper, Smith and Buchanan",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0346",
+    "name1": "Zhang PLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0347",
+    "name1": "Jones PLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0348",
+    "name1": "Willis and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0349",
+    "name1": "Schroeder-Kramer",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0350",
+    "name1": "Smith, Garrison and Thomas",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0351",
+    "name1": "Fernandez and Sons",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0352",
+    "name1": "Guerrero Inc",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0353",
+    "name1": "Smith and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0354",
+    "name1": "Morris, Thompson and Williams",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0355",
+    "name1": "Fisher, Wilson and Brown",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0356",
+    "name1": "Strickland-Palmer",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0357",
+    "name1": "Hayes and Sons",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0358",
+    "name1": "Williams, Logan and Camacho",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0359",
+    "name1": "Turner, Schneider and Johnson",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0360",
+    "name1": "Boone-Simmons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0361",
+    "name1": "Henry Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0362",
+    "name1": "Lam LLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0363",
+    "name1": "Hernandez, Martinez and Weber",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0364",
+    "name1": "Kelley, Nguyen and Vang",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0365",
+    "name1": "Phillips, Wagner and Jordan",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0366",
+    "name1": "Wilson, Pena and Rich",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0367",
+    "name1": "Le, Lewis and Hayes",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0368",
+    "name1": "Gutierrez Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0369",
+    "name1": "Perry-Davis",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0370",
+    "name1": "Edwards-Scott",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0371",
+    "name1": "Mcdaniel Group",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0372",
+    "name1": "Davis Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0373",
+    "name1": "Reynolds Ltd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0374",
+    "name1": "Watson, Anderson and Brown",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0375",
+    "name1": "Hoffman, Santiago and Jenkins",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0376",
+    "name1": "Pugh, Henderson and Moon",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0377",
+    "name1": "Schmitt PLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0378",
+    "name1": "Bell-Lane",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0379",
+    "name1": "Moore Group",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0380",
+    "name1": "Boone LLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0381",
+    "name1": "Richardson, Farmer and Andrews",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0382",
+    "name1": "Bruce-Villegas",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0383",
+    "name1": "Austin, Day and Johnson",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0384",
+    "name1": "Gallegos, Adams and White",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0385",
+    "name1": "Farmer, Dorsey and Bell",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0386",
+    "name1": "Kane PLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0387",
+    "name1": "Morales, Thomas and Schultz",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0388",
+    "name1": "Davis PLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0389",
+    "name1": "Bennett Group",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0390",
+    "name1": "Moore-Collins",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0391",
+    "name1": "Frank-Bradley",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0392",
+    "name1": "Ware and Sons",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0393",
+    "name1": "Webster Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0394",
+    "name1": "Miller, Ramos and Coleman",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0395",
+    "name1": "Ramos, Nelson and Fischer",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0396",
+    "name1": "Reed Inc",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0397",
+    "name1": "Gregory-Watkins",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0398",
+    "name1": "Estrada, Williams and Foster",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0399",
+    "name1": "Brown, Harris and Dougherty",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0400",
+    "name1": "Duran LLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0401",
+    "name1": "Wilson-Jimenez",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0402",
+    "name1": "Thompson-James",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0403",
+    "name1": "Hall, Hansen and Barnett",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0404",
+    "name1": "Jones-Hensley",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0405",
+    "name1": "Graham Group",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0406",
+    "name1": "Atkins PLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0407",
+    "name1": "Berry-Mckinney",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0408",
+    "name1": "Roberts-Sullivan",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0409",
+    "name1": "Jackson-Meza",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0410",
+    "name1": "Collier-Gillespie",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0411",
+    "name1": "Kim Inc",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0412",
+    "name1": "Graham Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0413",
+    "name1": "Miller, Harrell and Reese",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0414",
+    "name1": "Cook and Sons",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0415",
+    "name1": "Dixon Inc",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0416",
+    "name1": "Hicks, Bullock and Bailey",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0417",
+    "name1": "Mullen, Brewer and Hernandez",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0418",
+    "name1": "Thomas and Sons",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0419",
+    "name1": "Morrison Ltd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0420",
+    "name1": "Thompson Ltd",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0421",
+    "name1": "Marshall-Elliott",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0422",
+    "name1": "Cole, Glass and Cunningham",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0423",
+    "name1": "Downs, Morris and Maddox",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0424",
+    "name1": "Hernandez-Jones",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0425",
+    "name1": "Welch-Hogan",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0426",
+    "name1": "Brown, Romero and Collins",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0427",
+    "name1": "Johnson-Wood",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0428",
+    "name1": "Jones-Lin",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0429",
+    "name1": "Gilbert PLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0430",
+    "name1": "Ford-Spencer",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0431",
+    "name1": "Huang, Cole and Pacheco",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0432",
+    "name1": "Lopez, Jacobs and Mason",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0433",
+    "name1": "Hayes LLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0434",
+    "name1": "Miller, Lucas and Williams",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "GOVERNMENT",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0435",
+    "name1": "Kim, Gonzales and Mills",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0436",
+    "name1": "Cox LLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0437",
+    "name1": "Ortiz-Morgan",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0438",
+    "name1": "Williams, Mccoy and Cook",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0439",
+    "name1": "Davis-Gregory",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0440",
+    "name1": "King-York",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0441",
+    "name1": "Marks, Cook and Aguilar",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0442",
+    "name1": "Rangel LLC",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0443",
+    "name1": "Hale, Myers and Larson",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0444",
+    "name1": "Collins Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0445",
+    "name1": "Conner, Li and Santiago",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0446",
+    "name1": "Osborn, Gaines and Davis",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0447",
+    "name1": "Henderson, Cox and Cox",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0448",
+    "name1": "Bean LLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0449",
+    "name1": "Lee-Cooke",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0450",
+    "name1": "Jones Inc",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0451",
+    "name1": "Wise, Conley and Stephenson",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0452",
+    "name1": "Stanley PLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0453",
+    "name1": "Harper and Sons",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0454",
+    "name1": "White Ltd",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0455",
+    "name1": "Lamb, Martin and Kim",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0456",
+    "name1": "Diaz-Ball",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0457",
+    "name1": "Bishop-Goodwin",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0458",
+    "name1": "Young-Allen",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0459",
+    "name1": "Mckee-Lee",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0460",
+    "name1": "Valentine, Joyce and Murray",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0461",
+    "name1": "Strickland-Shaw",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0462",
+    "name1": "Burch-Montoya",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "RETAIL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0463",
+    "name1": "Taylor, Wright and Davidson",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0464",
+    "name1": "Spencer-Garcia",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0465",
+    "name1": "Rosales, Mitchell and Hines",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0466",
+    "name1": "Cole-Palmer",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0467",
+    "name1": "Davis-Lozano",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0468",
+    "name1": "Wilkerson-Arias",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "GOVERNMENT",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0469",
+    "name1": "Brown-Shaw",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0470",
+    "name1": "Hughes Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0471",
+    "name1": "Walker-Flores",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0472",
+    "name1": "Combs Ltd",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0473",
+    "name1": "Moody-Taylor",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0474",
+    "name1": "Lowery-Kennedy",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0475",
+    "name1": "Blake Group",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0476",
+    "name1": "Gilbert-Bullock",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0477",
+    "name1": "Scott and Sons",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0478",
+    "name1": "Bentley, Lynch and Henderson",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0479",
+    "name1": "Young-Martinez",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0480",
+    "name1": "Barnes PLC",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0481",
+    "name1": "Brown-Copeland",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0482",
+    "name1": "Carlson-Smith",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0483",
+    "name1": "Andrews, Higgins and Carter",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0484",
+    "name1": "Mendez and Sons",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0485",
+    "name1": "Butler, Beck and Miller",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "RETAIL",
+    "vkorg": "3000"
+  },
+  {
+    "kunnr": "CUST0486",
+    "name1": "Jones-Fox",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0487",
+    "name1": "Hartman, Romero and Smith",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0488",
+    "name1": "Williams-Hughes",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "RETAIL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0489",
+    "name1": "King-Smith",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "WHOLESALE",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0490",
+    "name1": "Cooper Ltd",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0491",
+    "name1": "Fuller, Ingram and Moss",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0492",
+    "name1": "Anderson-Bell",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0493",
+    "name1": "Li-Thompson",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0494",
+    "name1": "Marshall, Dominguez and Welch",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0495",
+    "name1": "Brown Group",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "GOVERNMENT",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0496",
+    "name1": "Carter Inc",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0497",
+    "name1": "Blackwell LLC",
+    "land1": "US",
+    "regio": "US",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "1000"
+  },
+  {
+    "kunnr": "CUST0498",
+    "name1": "Robertson-Hays",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "WHOLESALE",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0499",
+    "name1": "Kennedy, Johnson and Lucas",
+    "land1": "EU",
+    "regio": "EU",
+    "brsch": "INDUSTRIAL",
+    "vkorg": "2000"
+  },
+  {
+    "kunnr": "CUST0500",
+    "name1": "Kelly-Norman",
+    "land1": "APAC",
+    "regio": "APAC",
+    "brsch": "WHOLESALE",
+    "vkorg": "3000"
+  }
+]

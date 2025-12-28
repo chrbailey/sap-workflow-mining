@@ -1,0 +1,169 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SAP Sales Order (VBAK/VBAP)",
+  "description": "Schema for synthetic SAP SD sales order documents",
+  "type": "object",
+  "required": ["vbeln", "auart", "vkorg", "vtweg", "spart", "kunnr", "erdat", "erzet", "ernam", "vdatu", "items"],
+  "properties": {
+    "vbeln": {
+      "type": "string",
+      "description": "Sales document number (10-digit)",
+      "pattern": "^[0-9]{10}$",
+      "examples": ["0000012345"]
+    },
+    "auart": {
+      "type": "string",
+      "description": "Order type",
+      "enum": ["OR", "ZOR", "RE", "CR"],
+      "examples": ["OR"]
+    },
+    "vkorg": {
+      "type": "string",
+      "description": "Sales organization",
+      "enum": ["1000", "2000", "3000"],
+      "examples": ["1000"]
+    },
+    "vtweg": {
+      "type": "string",
+      "description": "Distribution channel",
+      "enum": ["10", "20"],
+      "examples": ["10"]
+    },
+    "spart": {
+      "type": "string",
+      "description": "Division",
+      "enum": ["00", "10"],
+      "examples": ["00"]
+    },
+    "kunnr": {
+      "type": "string",
+      "description": "Sold-to customer number",
+      "pattern": "^CUST[0-9]{4}$",
+      "examples": ["CUST0001"]
+    },
+    "erdat": {
+      "type": "string",
+      "format": "date",
+      "description": "Created date (YYYY-MM-DD)",
+      "examples": ["2024-01-15"]
+    },
+    "erzet": {
+      "type": "string",
+      "description": "Created time (HH:MM:SS)",
+      "pattern": "^[0-9]{2}:[0-9]{2}:[0-9]{2}$",
+      "examples": ["10:30:45"]
+    },
+    "ernam": {
+      "type": "string",
+      "description": "Created by user",
+      "pattern": "^USER[0-9]{3}$",
+      "examples": ["USER001"]
+    },
+    "vdatu": {
+      "type": "string",
+      "format": "date",
+      "description": "Requested delivery date",
+      "examples": ["2024-01-22"]
+    },
+    "header_texts": {
+      "type": "array",
+      "description": "Header-level text records",
+      "items": {
+        "$ref": "#/definitions/TextRecord"
+      }
+    },
+    "items": {
+      "type": "array",
+      "description": "Sales order line items (VBAP)",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/SalesOrderItem"
+      }
+    }
+  },
+  "definitions": {
+    "TextRecord": {
+      "type": "object",
+      "required": ["text_id", "text", "lang", "changed_at"],
+      "properties": {
+        "text_id": {
+          "type": "string",
+          "description": "Text identifier",
+          "examples": ["0001"]
+        },
+        "text": {
+          "type": "string",
+          "description": "Text content - may contain patterns like EXPEDITE, HOLD, etc.",
+          "examples": ["EXPEDITE - customer needs by Friday"]
+        },
+        "lang": {
+          "type": "string",
+          "description": "Language code",
+          "enum": ["EN", "DE", "FR"],
+          "examples": ["EN"]
+        },
+        "changed_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when text was changed",
+          "examples": ["2024-01-15T10:35:00Z"]
+        }
+      }
+    },
+    "SalesOrderItem": {
+      "type": "object",
+      "required": ["posnr", "matnr", "werks", "kwmeng", "netwr", "waerk", "pstyv"],
+      "properties": {
+        "posnr": {
+          "type": "string",
+          "description": "Item number (6-digit, increments by 10)",
+          "pattern": "^[0-9]{6}$",
+          "examples": ["000010"]
+        },
+        "matnr": {
+          "type": "string",
+          "description": "Material number",
+          "pattern": "^MAT[0-9]{3}$",
+          "examples": ["MAT001"]
+        },
+        "werks": {
+          "type": "string",
+          "description": "Plant",
+          "enum": ["1000", "1100", "2000", "3000"],
+          "examples": ["1000"]
+        },
+        "kwmeng": {
+          "type": "number",
+          "description": "Order quantity",
+          "minimum": 0,
+          "examples": [100]
+        },
+        "netwr": {
+          "type": "number",
+          "description": "Net value (quantity * price)",
+          "minimum": 0,
+          "examples": [5000.00]
+        },
+        "waerk": {
+          "type": "string",
+          "description": "Currency",
+          "enum": ["USD", "EUR"],
+          "examples": ["USD"]
+        },
+        "pstyv": {
+          "type": "string",
+          "description": "Item category",
+          "enum": ["TAN", "REN"],
+          "examples": ["TAN"]
+        },
+        "item_texts": {
+          "type": "array",
+          "description": "Item-level text records",
+          "items": {
+            "$ref": "#/definitions/TextRecord"
+          }
+        }
+      }
+    }
+  }
+}

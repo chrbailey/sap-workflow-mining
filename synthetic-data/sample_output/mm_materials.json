@@ -1,0 +1,1052 @@
+[
+  {
+    "matnr": "MMAT001",
+    "maktx": "Poor Relate CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 48.62
+  },
+  {
+    "matnr": "MMAT002",
+    "maktx": "Hundred Great CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 25.54
+  },
+  {
+    "matnr": "MMAT003",
+    "maktx": "Air Miss SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 56.27
+  },
+  {
+    "matnr": "MMAT004",
+    "maktx": "Today Garden RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 53.63
+  },
+  {
+    "matnr": "MMAT005",
+    "maktx": "Court Method SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 354.95
+  },
+  {
+    "matnr": "MMAT006",
+    "maktx": "Difference Hear RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 33.15
+  },
+  {
+    "matnr": "MMAT007",
+    "maktx": "Subject Evening SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 362.42
+  },
+  {
+    "matnr": "MMAT008",
+    "maktx": "Grow Far SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 89.26
+  },
+  {
+    "matnr": "MMAT009",
+    "maktx": "Up Pick SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 411.86
+  },
+  {
+    "matnr": "MMAT010",
+    "maktx": "Science Up RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 145.93
+  },
+  {
+    "matnr": "MMAT011",
+    "maktx": "Fact Only RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 34.9
+  },
+  {
+    "matnr": "MMAT012",
+    "maktx": "Action Nation SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 22.94
+  },
+  {
+    "matnr": "MMAT013",
+    "maktx": "Yourself Cut SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 62.65
+  },
+  {
+    "matnr": "MMAT014",
+    "maktx": "Bed Effort CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 15.75
+  },
+  {
+    "matnr": "MMAT015",
+    "maktx": "Service Investment RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 135.94
+  },
+  {
+    "matnr": "MMAT016",
+    "maktx": "Middle One SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 480.03
+  },
+  {
+    "matnr": "MMAT017",
+    "maktx": "Son Effect SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 139.1
+  },
+  {
+    "matnr": "MMAT018",
+    "maktx": "Rock Maybe SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 61.19
+  },
+  {
+    "matnr": "MMAT019",
+    "maktx": "Race Seek SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 96.93
+  },
+  {
+    "matnr": "MMAT020",
+    "maktx": "Military Line SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 20.36
+  },
+  {
+    "matnr": "MMAT021",
+    "maktx": "Structure Adult SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 65.77
+  },
+  {
+    "matnr": "MMAT022",
+    "maktx": "Better Financial RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 193.58
+  },
+  {
+    "matnr": "MMAT023",
+    "maktx": "Do Interview RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 187.27
+  },
+  {
+    "matnr": "MMAT024",
+    "maktx": "Role Either SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 121.63
+  },
+  {
+    "matnr": "MMAT025",
+    "maktx": "Follow Record SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 403.14
+  },
+  {
+    "matnr": "MMAT026",
+    "maktx": "Party Home SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 58.03
+  },
+  {
+    "matnr": "MMAT027",
+    "maktx": "Material On SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 125.27
+  },
+  {
+    "matnr": "MMAT028",
+    "maktx": "Nice Guy RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 161.4
+  },
+  {
+    "matnr": "MMAT029",
+    "maktx": "Large Skill SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 288.85
+  },
+  {
+    "matnr": "MMAT030",
+    "maktx": "Oil Give RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 125.14
+  },
+  {
+    "matnr": "MMAT031",
+    "maktx": "He Scientist CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 30.55
+  },
+  {
+    "matnr": "MMAT032",
+    "maktx": "Long Experience CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 21.22
+  },
+  {
+    "matnr": "MMAT033",
+    "maktx": "Follow Enter RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 90.92
+  },
+  {
+    "matnr": "MMAT034",
+    "maktx": "During Camera SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 343.37
+  },
+  {
+    "matnr": "MMAT035",
+    "maktx": "Set Data CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 23.24
+  },
+  {
+    "matnr": "MMAT036",
+    "maktx": "Four Call CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 13.14
+  },
+  {
+    "matnr": "MMAT037",
+    "maktx": "Situation North SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 385.71
+  },
+  {
+    "matnr": "MMAT038",
+    "maktx": "Sound Road RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 165.15
+  },
+  {
+    "matnr": "MMAT039",
+    "maktx": "Crime Dark CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 4.26
+  },
+  {
+    "matnr": "MMAT040",
+    "maktx": "Direction Single RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 122.94
+  },
+  {
+    "matnr": "MMAT041",
+    "maktx": "Member Factor SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 421.1
+  },
+  {
+    "matnr": "MMAT042",
+    "maktx": "Shake Perform RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 68.96
+  },
+  {
+    "matnr": "MMAT043",
+    "maktx": "Soon Network CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 46.13
+  },
+  {
+    "matnr": "MMAT044",
+    "maktx": "Picture Fear RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 41.45
+  },
+  {
+    "matnr": "MMAT045",
+    "maktx": "Black There RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 39.19
+  },
+  {
+    "matnr": "MMAT046",
+    "maktx": "Daughter Fine SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 101.97
+  },
+  {
+    "matnr": "MMAT047",
+    "maktx": "Dream Herself SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 13.03
+  },
+  {
+    "matnr": "MMAT048",
+    "maktx": "Country Five RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 43.18
+  },
+  {
+    "matnr": "MMAT049",
+    "maktx": "Address Section CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 29.97
+  },
+  {
+    "matnr": "MMAT050",
+    "maktx": "None Card RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 139.34
+  },
+  {
+    "matnr": "MMAT051",
+    "maktx": "Eye Answer CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 16.58
+  },
+  {
+    "matnr": "MMAT052",
+    "maktx": "Arm On SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 277.04
+  },
+  {
+    "matnr": "MMAT053",
+    "maktx": "Final Save SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 128.41
+  },
+  {
+    "matnr": "MMAT054",
+    "maktx": "Yet Card CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 3.13
+  },
+  {
+    "matnr": "MMAT055",
+    "maktx": "Pull Trouble SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 156.54
+  },
+  {
+    "matnr": "MMAT056",
+    "maktx": "Soldier Military RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 57.38
+  },
+  {
+    "matnr": "MMAT057",
+    "maktx": "Board Turn SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 65.36
+  },
+  {
+    "matnr": "MMAT058",
+    "maktx": "Actually Painting SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 12.14
+  },
+  {
+    "matnr": "MMAT059",
+    "maktx": "Feel Manager RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 109.51
+  },
+  {
+    "matnr": "MMAT060",
+    "maktx": "Measure Let SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 95.75
+  },
+  {
+    "matnr": "MMAT061",
+    "maktx": "Grow Create RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 19.87
+  },
+  {
+    "matnr": "MMAT062",
+    "maktx": "Approach Entire CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 46.32
+  },
+  {
+    "matnr": "MMAT063",
+    "maktx": "Yeah Training SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 127.32
+  },
+  {
+    "matnr": "MMAT064",
+    "maktx": "Mean Build RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 181.5
+  },
+  {
+    "matnr": "MMAT065",
+    "maktx": "Term Attention RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 162.38
+  },
+  {
+    "matnr": "MMAT066",
+    "maktx": "Institution Million CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 39.19
+  },
+  {
+    "matnr": "MMAT067",
+    "maktx": "Back Part SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 117.95
+  },
+  {
+    "matnr": "MMAT068",
+    "maktx": "Professional Rich SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 24.51
+  },
+  {
+    "matnr": "MMAT069",
+    "maktx": "Argue Civil CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 26.2
+  },
+  {
+    "matnr": "MMAT070",
+    "maktx": "Church Talk SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 129.35
+  },
+  {
+    "matnr": "MMAT071",
+    "maktx": "Order Fly CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 19.87
+  },
+  {
+    "matnr": "MMAT072",
+    "maktx": "Bed Energy SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 337.8
+  },
+  {
+    "matnr": "MMAT073",
+    "maktx": "By Open RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 36.56
+  },
+  {
+    "matnr": "MMAT074",
+    "maktx": "South Keep SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 265.04
+  },
+  {
+    "matnr": "MMAT075",
+    "maktx": "Police Pick RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 54.19
+  },
+  {
+    "matnr": "MMAT076",
+    "maktx": "Street Present SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 215.38
+  },
+  {
+    "matnr": "MMAT077",
+    "maktx": "Draw Stand SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 52.49
+  },
+  {
+    "matnr": "MMAT078",
+    "maktx": "Necessary Husband SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 220.76
+  },
+  {
+    "matnr": "MMAT079",
+    "maktx": "Little When RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 66.41
+  },
+  {
+    "matnr": "MMAT080",
+    "maktx": "Level Finish SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 142.58
+  },
+  {
+    "matnr": "MMAT081",
+    "maktx": "Trade Per SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 74.73
+  },
+  {
+    "matnr": "MMAT082",
+    "maktx": "Laugh Focus CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 17.09
+  },
+  {
+    "matnr": "MMAT083",
+    "maktx": "Outside Pressure SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 431.85
+  },
+  {
+    "matnr": "MMAT084",
+    "maktx": "As Poor SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 99.63
+  },
+  {
+    "matnr": "MMAT085",
+    "maktx": "Sister Bit RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 111.22
+  },
+  {
+    "matnr": "MMAT086",
+    "maktx": "Yourself Source CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 32.01
+  },
+  {
+    "matnr": "MMAT087",
+    "maktx": "Despite Process RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 149.63
+  },
+  {
+    "matnr": "MMAT088",
+    "maktx": "Development Everything SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 141.08
+  },
+  {
+    "matnr": "MMAT089",
+    "maktx": "Recent Beat SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 129.8
+  },
+  {
+    "matnr": "MMAT090",
+    "maktx": "Close Education SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 24.15
+  },
+  {
+    "matnr": "MMAT091",
+    "maktx": "Consumer Old CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 5.66
+  },
+  {
+    "matnr": "MMAT092",
+    "maktx": "Bad Close SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 110.23
+  },
+  {
+    "matnr": "MMAT093",
+    "maktx": "Able Issue SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 140.71
+  },
+  {
+    "matnr": "MMAT094",
+    "maktx": "Little Risk RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 36.11
+  },
+  {
+    "matnr": "MMAT095",
+    "maktx": "Phone Many CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 40.24
+  },
+  {
+    "matnr": "MMAT096",
+    "maktx": "Film Alone CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 30.09
+  },
+  {
+    "matnr": "MMAT097",
+    "maktx": "Each Fight SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 407.8
+  },
+  {
+    "matnr": "MMAT098",
+    "maktx": "Seat Fear CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 47.36
+  },
+  {
+    "matnr": "MMAT099",
+    "maktx": "Scientist Trade RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 122.11
+  },
+  {
+    "matnr": "MMAT100",
+    "maktx": "Long Avoid SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 92.77
+  },
+  {
+    "matnr": "MMAT101",
+    "maktx": "Right East SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 29.84
+  },
+  {
+    "matnr": "MMAT102",
+    "maktx": "Window Everything SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 86.92
+  },
+  {
+    "matnr": "MMAT103",
+    "maktx": "Store Strong RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 98.54
+  },
+  {
+    "matnr": "MMAT104",
+    "maktx": "Process Perform SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 80.78
+  },
+  {
+    "matnr": "MMAT105",
+    "maktx": "Recently Summer SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 120.89
+  },
+  {
+    "matnr": "MMAT106",
+    "maktx": "World Decade CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 25.12
+  },
+  {
+    "matnr": "MMAT107",
+    "maktx": "Large Building RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 186.93
+  },
+  {
+    "matnr": "MMAT108",
+    "maktx": "Off Down SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 22.36
+  },
+  {
+    "matnr": "MMAT109",
+    "maktx": "Raise Church CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 5.3
+  },
+  {
+    "matnr": "MMAT110",
+    "maktx": "When Exactly RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 134.99
+  },
+  {
+    "matnr": "MMAT111",
+    "maktx": "The Change SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 117.28
+  },
+  {
+    "matnr": "MMAT112",
+    "maktx": "Away As SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 352.05
+  },
+  {
+    "matnr": "MMAT113",
+    "maktx": "Company Structure SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 135.26
+  },
+  {
+    "matnr": "MMAT114",
+    "maktx": "Food Physical SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 393.14
+  },
+  {
+    "matnr": "MMAT115",
+    "maktx": "Smile Thank SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 57.81
+  },
+  {
+    "matnr": "MMAT116",
+    "maktx": "Outside Will SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 191.5
+  },
+  {
+    "matnr": "MMAT117",
+    "maktx": "Fight Leg SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 116.5
+  },
+  {
+    "matnr": "MMAT118",
+    "maktx": "Capital Management RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 187.86
+  },
+  {
+    "matnr": "MMAT119",
+    "maktx": "Risk Fly SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 60.58
+  },
+  {
+    "matnr": "MMAT120",
+    "maktx": "Scene Interesting SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 378.36
+  },
+  {
+    "matnr": "MMAT121",
+    "maktx": "Yes Expert RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 187.87
+  },
+  {
+    "matnr": "MMAT122",
+    "maktx": "Month Notice SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 118.14
+  },
+  {
+    "matnr": "MMAT123",
+    "maktx": "Minute Left SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 59.57
+  },
+  {
+    "matnr": "MMAT124",
+    "maktx": "Be Piece SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 493.98
+  },
+  {
+    "matnr": "MMAT125",
+    "maktx": "Among Visit RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 190.73
+  },
+  {
+    "matnr": "MMAT126",
+    "maktx": "Lay Simple SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 22.18
+  },
+  {
+    "matnr": "MMAT127",
+    "maktx": "Future Pm SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 336.68
+  },
+  {
+    "matnr": "MMAT128",
+    "maktx": "Enough Agree CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 6.97
+  },
+  {
+    "matnr": "MMAT129",
+    "maktx": "Benefit Drop SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 358.74
+  },
+  {
+    "matnr": "MMAT130",
+    "maktx": "Represent Think SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 6.78
+  },
+  {
+    "matnr": "MMAT131",
+    "maktx": "Traditional Parent RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 166.83
+  },
+  {
+    "matnr": "MMAT132",
+    "maktx": "People Against SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 182.91
+  },
+  {
+    "matnr": "MMAT133",
+    "maktx": "Southern Remember CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 22.67
+  },
+  {
+    "matnr": "MMAT134",
+    "maktx": "Term Exist SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 185.87
+  },
+  {
+    "matnr": "MMAT135",
+    "maktx": "Part Amount SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 118.29
+  },
+  {
+    "matnr": "MMAT136",
+    "maktx": "Source Something CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 6.42
+  },
+  {
+    "matnr": "MMAT137",
+    "maktx": "Continue Many SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 445.64
+  },
+  {
+    "matnr": "MMAT138",
+    "maktx": "Natural Reach CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 14.91
+  },
+  {
+    "matnr": "MMAT139",
+    "maktx": "Letter Whom CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 6.21
+  },
+  {
+    "matnr": "MMAT140",
+    "maktx": "Fall Course CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 49.96
+  },
+  {
+    "matnr": "MMAT141",
+    "maktx": "Pay Least RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 133.52
+  },
+  {
+    "matnr": "MMAT142",
+    "maktx": "Prove Teach SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 18.11
+  },
+  {
+    "matnr": "MMAT143",
+    "maktx": "Million Benefit SPARE",
+    "mtart": "SPARE",
+    "meins": "EA",
+    "base_price": 9.2
+  },
+  {
+    "matnr": "MMAT144",
+    "maktx": "Many Happen CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 12.8
+  },
+  {
+    "matnr": "MMAT145",
+    "maktx": "Issue Goal SEMIFINISHED",
+    "mtart": "SEMIFINISHED",
+    "meins": "EA",
+    "base_price": 399.55
+  },
+  {
+    "matnr": "MMAT146",
+    "maktx": "Full Religious RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 47.66
+  },
+  {
+    "matnr": "MMAT147",
+    "maktx": "Book Toward RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 134.69
+  },
+  {
+    "matnr": "MMAT148",
+    "maktx": "College Girl CONSUMABLE",
+    "mtart": "CONSUMABLE",
+    "meins": "EA",
+    "base_price": 2.77
+  },
+  {
+    "matnr": "MMAT149",
+    "maktx": "Its Rule RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 19.82
+  },
+  {
+    "matnr": "MMAT150",
+    "maktx": "Mission Fight RAW",
+    "mtart": "RAW",
+    "meins": "EA",
+    "base_price": 125.13
+  }
+]

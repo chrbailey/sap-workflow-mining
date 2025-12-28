@@ -1,0 +1,314 @@
+{
+  "sales_organizations": {
+    "1000": {
+      "name": "US Sales Organization",
+      "country": "US",
+      "currency": "USD",
+      "timezone": "America/New_York"
+    },
+    "1100": {
+      "name": "US West Sales Org",
+      "country": "US",
+      "currency": "USD",
+      "timezone": "America/Los_Angeles"
+    },
+    "1200": {
+      "name": "US Central Sales Org",
+      "country": "US",
+      "currency": "USD",
+      "timezone": "America/Chicago"
+    },
+    "2000": {
+      "name": "Europe Sales Organization",
+      "country": "DE",
+      "currency": "EUR",
+      "timezone": "Europe/Berlin"
+    },
+    "2100": {
+      "name": "UK Sales Organization",
+      "country": "GB",
+      "currency": "GBP",
+      "timezone": "Europe/London"
+    },
+    "3000": {
+      "name": "Asia Pacific Sales Org",
+      "country": "SG",
+      "currency": "USD",
+      "timezone": "Asia/Singapore"
+    },
+    "3100": {
+      "name": "Japan Sales Organization",
+      "country": "JP",
+      "currency": "JPY",
+      "timezone": "Asia/Tokyo"
+    },
+    "4000": {
+      "name": "Latin America Sales Org",
+      "country": "BR",
+      "currency": "USD",
+      "timezone": "America/Sao_Paulo"
+    }
+  },
+  "plants": {
+    "1000": {
+      "name": "Main Manufacturing Plant",
+      "city": "Chicago",
+      "country": "US",
+      "sales_org": "1000"
+    },
+    "1100": {
+      "name": "East Coast Distribution",
+      "city": "Newark",
+      "country": "US",
+      "sales_org": "1000"
+    },
+    "1200": {
+      "name": "West Coast Distribution",
+      "city": "Los Angeles",
+      "country": "US",
+      "sales_org": "1100"
+    },
+    "1300": {
+      "name": "Texas Manufacturing",
+      "city": "Houston",
+      "country": "US",
+      "sales_org": "1200"
+    },
+    "1400": {
+      "name": "Southeast Distribution",
+      "city": "Atlanta",
+      "country": "US",
+      "sales_org": "1000"
+    },
+    "2000": {
+      "name": "Germany Manufacturing",
+      "city": "Munich",
+      "country": "DE",
+      "sales_org": "2000"
+    },
+    "2100": {
+      "name": "UK Distribution Center",
+      "city": "London",
+      "country": "GB",
+      "sales_org": "2100"
+    },
+    "2200": {
+      "name": "France Distribution",
+      "city": "Paris",
+      "country": "FR",
+      "sales_org": "2000"
+    },
+    "3000": {
+      "name": "Singapore Hub",
+      "city": "Singapore",
+      "country": "SG",
+      "sales_org": "3000"
+    },
+    "3100": {
+      "name": "Japan Distribution",
+      "city": "Tokyo",
+      "country": "JP",
+      "sales_org": "3100"
+    },
+    "3200": {
+      "name": "China Manufacturing",
+      "city": "Shanghai",
+      "country": "CN",
+      "sales_org": "3000"
+    },
+    "3300": {
+      "name": "Australia Distribution",
+      "city": "Sydney",
+      "country": "AU",
+      "sales_org": "3000"
+    },
+    "4000": {
+      "name": "Brazil Manufacturing",
+      "city": "Sao Paulo",
+      "country": "BR",
+      "sales_org": "4000"
+    },
+    "4100": {
+      "name": "Mexico Distribution",
+      "city": "Mexico City",
+      "country": "MX",
+      "sales_org": "4000"
+    }
+  },
+  "distribution_channels": {
+    "10": {
+      "name": "Direct Sales",
+      "description": "Direct sales to end customers"
+    },
+    "20": {
+      "name": "Wholesale",
+      "description": "Sales to distributors and wholesalers"
+    },
+    "30": {
+      "name": "Retail",
+      "description": "Sales through retail channels"
+    }
+  },
+  "divisions": {
+    "00": {
+      "name": "Cross-Division",
+      "description": "Products spanning multiple divisions"
+    },
+    "01": {
+      "name": "Industrial Products",
+      "description": "Heavy machinery and industrial equipment"
+    },
+    "02": {
+      "name": "Consumer Products",
+      "description": "Consumer goods and retail products"
+    },
+    "03": {
+      "name": "Services",
+      "description": "Service offerings and maintenance"
+    }
+  },
+  "order_types": {
+    "OR": {
+      "name": "Standard Order",
+      "description": "Regular sales order",
+      "category": "ORDER"
+    },
+    "ZOR": {
+      "name": "Custom Standard Order",
+      "description": "Customized standard order with special handling",
+      "category": "ORDER"
+    },
+    "RE": {
+      "name": "Return Order",
+      "description": "Customer return processing",
+      "category": "RETURN"
+    },
+    "CR": {
+      "name": "Credit Memo Request",
+      "description": "Request for credit to customer",
+      "category": "CREDIT"
+    },
+    "DR": {
+      "name": "Debit Memo Request",
+      "description": "Request for additional charge to customer",
+      "category": "DEBIT"
+    },
+    "SO": {
+      "name": "Rush Order",
+      "description": "Expedited order requiring priority handling",
+      "category": "ORDER"
+    }
+  },
+  "delivery_types": {
+    "LF": {
+      "name": "Outbound Delivery",
+      "description": "Standard outbound delivery to customer"
+    },
+    "LO": {
+      "name": "Delivery without Reference",
+      "description": "Delivery without sales order reference"
+    },
+    "LR": {
+      "name": "Return Delivery",
+      "description": "Inbound delivery for returns"
+    }
+  },
+  "invoice_types": {
+    "F2": {
+      "name": "Invoice",
+      "description": "Standard customer invoice"
+    },
+    "RE": {
+      "name": "Credit Memo",
+      "description": "Credit to customer account"
+    },
+    "L2": {
+      "name": "Debit Memo",
+      "description": "Additional charge to customer"
+    },
+    "S1": {
+      "name": "Cancellation",
+      "description": "Invoice cancellation document"
+    },
+    "IV": {
+      "name": "Intercompany Invoice",
+      "description": "Invoice between company codes"
+    }
+  },
+  "text_types": {
+    "0001": {
+      "name": "Header Note",
+      "description": "General header text for document"
+    },
+    "0002": {
+      "name": "Internal Note",
+      "description": "Internal processing notes"
+    },
+    "0003": {
+      "name": "Shipping Instructions",
+      "description": "Special shipping requirements"
+    },
+    "0004": {
+      "name": "Picking Instructions",
+      "description": "Warehouse picking notes"
+    },
+    "0005": {
+      "name": "Customer Comment",
+      "description": "Customer-provided comments"
+    },
+    "Z001": {
+      "name": "Expedite Note",
+      "description": "Rush/priority handling notes"
+    },
+    "Z002": {
+      "name": "Hold Note",
+      "description": "Credit/approval hold notes"
+    },
+    "Z003": {
+      "name": "Quality Note",
+      "description": "Quality-related observations"
+    }
+  },
+  "document_categories": {
+    "C": "Sales Order",
+    "J": "Delivery",
+    "M": "Billing Document",
+    "H": "Returns Order",
+    "K": "Credit/Debit Memo",
+    "L": "Delivery Note"
+  },
+  "item_categories": {
+    "TAN": {
+      "name": "Standard Item",
+      "description": "Regular stock item"
+    },
+    "TAD": {
+      "name": "Service Item",
+      "description": "Service or labor item"
+    },
+    "TANN": {
+      "name": "Non-Stock Item",
+      "description": "Item not carried in inventory"
+    },
+    "TAX": {
+      "name": "Text Item",
+      "description": "Text-only line item"
+    },
+    "REN": {
+      "name": "Return Item",
+      "description": "Item being returned"
+    }
+  },
+  "rejection_reasons": {
+    "01": "Customer Request",
+    "02": "Out of Stock",
+    "03": "Quality Issue",
+    "04": "Pricing Dispute",
+    "05": "Delivery Delay",
+    "06": "Order Cancelled",
+    "07": "Duplicate Order",
+    "08": "Credit Issue",
+    "09": "Compliance Block",
+    "10": "Other"
+  }
+}

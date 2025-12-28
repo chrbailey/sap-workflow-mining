@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAP Workflow Mining - Pattern Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>SAP Workflow Mining</h1>
+            <p class="subtitle">Pattern Discovery Results</p>
+        </div>
+        <div class="header-stats" id="header-stats">
+            <!-- Stats populated by JS -->
+        </div>
+    </header>
+
+    <nav id="filters">
+        <div class="filter-group">
+            <label for="search-input">Search Phrases</label>
+            <input type="text" id="search-input" placeholder="Search patterns...">
+        </div>
+        <div class="filter-group">
+            <label for="confidence-filter">Confidence Level</label>
+            <select id="confidence-filter">
+                <option value="">All Levels</option>
+                <option value="high">HIGH (80%+)</option>
+                <option value="medium">MEDIUM (60-79%)</option>
+                <option value="low">LOW (&lt;60%)</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="sales-org-filter">Sales Org</label>
+            <select id="sales-org-filter">
+                <option value="">All Sales Orgs</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="industry-filter">Customer Industry</label>
+            <select id="industry-filter">
+                <option value="">All Industries</option>
+            </select>
+        </div>
+        <div class="filter-actions">
+            <button id="clear-filters" class="btn-secondary">Clear Filters</button>
+            <button id="export-json" class="btn-secondary">Export JSON</button>
+            <button id="export-markdown" class="btn-secondary">Export Markdown</button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <main id="pattern-list">
+            <div class="loading">Loading patterns...</div>
+        </main>
+
+        <aside id="detail-panel" class="hidden">
+            <div class="detail-header">
+                <h2 id="detail-title">Pattern Details</h2>
+                <button id="close-detail" class="btn-icon" aria-label="Close">&times;</button>
+            </div>
+            <div id="detail-content">
+                <!-- Detail content populated by JS -->
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>SAP Workflow Mining Pattern Viewer</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

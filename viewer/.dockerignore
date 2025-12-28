@@ -1,0 +1,38 @@
+# SAP Workflow Mining - Viewer
+# Docker build context exclusions
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Node.js (if applicable)
+node_modules/
+npm-debug.log*
+
+# Python (if applicable)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Documentation
+*.md
+!README.md
+
+# Output (mounted as volume)
+output/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini

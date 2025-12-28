@@ -1,0 +1,44 @@
+# SAP Workflow Mining - Root Docker Ignore
+# Used when building from project root
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Output directories (mounted as volumes)
+output/
+synthetic-data/sample_output/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Documentation (keep README)
+*.md
+!README.md
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Node modules (each service has its own)
+node_modules/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Test outputs
+.pytest_cache/
+.coverage
+htmlcov/
+coverage/

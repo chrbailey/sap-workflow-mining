@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SAP Invoice (VBRK/VBRP)",
+  "description": "Schema for synthetic SAP SD billing documents",
+  "type": "object",
+  "required": ["vbeln", "fkdat", "erdat", "netwr", "waerk", "kunrg", "items"],
+  "properties": {
+    "vbeln": {
+      "type": "string",
+      "description": "Invoice document number",
+      "pattern": "^[0-9]{10}$",
+      "examples": ["9000000001"]
+    },
+    "fkdat": {
+      "type": "string",
+      "format": "date",
+      "description": "Billing date",
+      "examples": ["2024-01-25"]
+    },
+    "erdat": {
+      "type": "string",
+      "format": "date",
+      "description": "Creation date",
+      "examples": ["2024-01-25"]
+    },
+    "netwr": {
+      "type": "number",
+      "description": "Net value of invoice",
+      "minimum": 0,
+      "examples": [5000.00]
+    },
+    "waerk": {
+      "type": "string",
+      "description": "Currency",
+      "enum": ["USD", "EUR"],
+      "examples": ["USD"]
+    },
+    "kunrg": {
+      "type": "string",
+      "description": "Payer customer number",
+      "pattern": "^CUST[0-9]{4}$",
+      "examples": ["CUST0001"]
+    },
+    "items": {
+      "type": "array",
+      "description": "Invoice line items (VBRP)",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/InvoiceItem"
+      }
+    }
+  },
+  "definitions": {
+    "InvoiceItem": {
+      "type": "object",
+      "required": ["posnr", "matnr", "fkimg", "netwr", "vbeln_ref", "posnr_ref"],
+      "properties": {
+        "posnr": {
+          "type": "string",
+          "description": "Item number",
+          "pattern": "^[0-9]{6}$",
+          "examples": ["000010"]
+        },
+        "matnr": {
+          "type": "string",
+          "description": "Material number",
+          "examples": ["MAT001"]
+        },
+        "fkimg": {
+          "type": "number",
+          "description": "Billed quantity",
+          "minimum": 0,
+          "examples": [100]
+        },
+        "netwr": {
+          "type": "number",
+          "description": "Net value for item",
+          "minimum": 0,
+          "examples": [5000.00]
+        },
+        "vbeln_ref": {
+          "type": "string",
+          "description": "Reference delivery number",
+          "examples": ["8000000001"]
+        },
+        "posnr_ref": {
+          "type": "string",
+          "description": "Reference delivery item",
+          "examples": ["000010"]
+        }
+      }
+    }
+  }
+}
