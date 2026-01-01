@@ -146,7 +146,29 @@ export class Gatekeeper {
     // ═══════════════════════════════════════════════════════════════════════
     // STEP 3: HOLD CHECK (Human-in-the-Loop)
     // ═══════════════════════════════════════════════════════════════════════
-    if (!request.bypassHold) {
+    // SECURITY: bypassHold requires a valid, approved holdDecision
+    let holdBypassed = false;
+    if (request.bypassHold && request.holdDecision) {
+      // Validate that the hold exists and was properly approved
+      const existingHold = this.holdManager.getHold(request.holdDecision.holdId);
+      if (existingHold && existingHold.status === 'approved') {
+        holdBypassed = true;
+      } else {
+        // Invalid bypass attempt - log and reject
+        this.logAudit(auditId, request, false, 'Invalid hold bypass attempt');
+        return {
+          success: false,
+          allowed: false,
+          held: false,
+          error: 'Invalid hold bypass: holdDecision must reference an approved hold',
+          preFlightCheck,
+          auditId,
+          timestamp,
+        };
+      }
+    }
+
+    if (!holdBypassed) {
       const holdTrigger = this.holdManager.shouldHold(request);
 
       if (holdTrigger) {
