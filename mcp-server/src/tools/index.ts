@@ -105,6 +105,21 @@ export {
   type DeviationType,
 } from './check_conformance.js';
 
+// Tool 13: Predict Outcome (Phase 5)
+export {
+  predictOutcomeTool,
+  executePredictOutcome,
+  PredictOutcomeSchema,
+  type PredictOutcomeInput,
+  type PredictionResult,
+  type Prediction,
+  type PredictionAlert,
+  type PredictionFactor,
+  type PredictionType,
+  type RiskLevel,
+  type ModelInfo,
+} from './predict_outcome.js';
+
 /**
  * All tool definitions for MCP registration
  */
@@ -120,6 +135,7 @@ import { askProcessTool } from './ask_process.js';
 import { exportOcelTool } from './export_ocel.js';
 import { visualizeProcessTool } from './visualize_process.js';
 import { checkConformanceTool } from './check_conformance.js';
+import { predictOutcomeTool } from './predict_outcome.js';
 
 export const allTools = [
   searchDocTextTool,
@@ -134,6 +150,7 @@ export const allTools = [
   exportOcelTool,
   visualizeProcessTool,
   checkConformanceTool,
+  predictOutcomeTool,
 ];
 
 /**
@@ -151,6 +168,7 @@ import { executeAskProcess } from './ask_process.js';
 import { executeExportOcel } from './export_ocel.js';
 import { executeVisualizeProcess } from './visualize_process.js';
 import { executeCheckConformance } from './check_conformance.js';
+import { executePredictOutcome } from './predict_outcome.js';
 import { SAPAdapter } from '../adapters/adapter.js';
 
 export type ToolExecutor = (adapter: SAPAdapter, input: unknown) => Promise<unknown>;
@@ -168,6 +186,7 @@ export const toolExecutors: Record<string, ToolExecutor> = {
   export_ocel: executeExportOcel,
   visualize_process: executeVisualizeProcess,
   check_conformance: executeCheckConformance,
+  predict_outcome: executePredictOutcome,
 };
 
 /**
