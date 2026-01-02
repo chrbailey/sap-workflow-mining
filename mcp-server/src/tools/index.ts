@@ -85,6 +85,14 @@ export {
   type ExportOcelInput,
 } from './export_ocel.js';
 
+// Tool 11: Visualize Process
+export {
+  visualizeProcessTool,
+  executeVisualizeProcess,
+  VisualizeProcessSchema,
+  type VisualizeProcessInput,
+} from './visualize_process.js';
+
 /**
  * All tool definitions for MCP registration
  */
@@ -98,6 +106,7 @@ import { getInvoiceTimingTool } from './get_invoice_timing.js';
 import { getMasterStubTool } from './get_master_stub.js';
 import { askProcessTool } from './ask_process.js';
 import { exportOcelTool } from './export_ocel.js';
+import { visualizeProcessTool } from './visualize_process.js';
 
 export const allTools = [
   searchDocTextTool,
@@ -110,6 +119,7 @@ export const allTools = [
   getMasterStubTool,
   askProcessTool,
   exportOcelTool,
+  visualizeProcessTool,
 ];
 
 /**
@@ -125,6 +135,7 @@ import { executeGetInvoiceTiming } from './get_invoice_timing.js';
 import { executeGetMasterStub } from './get_master_stub.js';
 import { executeAskProcess } from './ask_process.js';
 import { executeExportOcel } from './export_ocel.js';
+import { executeVisualizeProcess } from './visualize_process.js';
 import { SAPAdapter } from '../adapters/adapter.js';
 
 export type ToolExecutor = (adapter: SAPAdapter, input: unknown) => Promise<unknown>;
@@ -140,6 +151,7 @@ export const toolExecutors: Record<string, ToolExecutor> = {
   get_master_stub: executeGetMasterStub,
   ask_process: executeAskProcess,
   export_ocel: executeExportOcel,
+  visualize_process: executeVisualizeProcess,
 };
 
 /**
