@@ -93,6 +93,18 @@ export {
   type VisualizeProcessInput,
 } from './visualize_process.js';
 
+// Tool 12: Check Conformance (Phase 3)
+export {
+  checkConformanceTool,
+  executeCheckConformance,
+  CheckConformanceSchema,
+  type CheckConformanceInput,
+  type ConformanceResult,
+  type Deviation,
+  type DeviationSeverity,
+  type DeviationType,
+} from './check_conformance.js';
+
 /**
  * All tool definitions for MCP registration
  */
@@ -107,6 +119,7 @@ import { getMasterStubTool } from './get_master_stub.js';
 import { askProcessTool } from './ask_process.js';
 import { exportOcelTool } from './export_ocel.js';
 import { visualizeProcessTool } from './visualize_process.js';
+import { checkConformanceTool } from './check_conformance.js';
 
 export const allTools = [
   searchDocTextTool,
@@ -120,6 +133,7 @@ export const allTools = [
   askProcessTool,
   exportOcelTool,
   visualizeProcessTool,
+  checkConformanceTool,
 ];
 
 /**
@@ -136,6 +150,7 @@ import { executeGetMasterStub } from './get_master_stub.js';
 import { executeAskProcess } from './ask_process.js';
 import { executeExportOcel } from './export_ocel.js';
 import { executeVisualizeProcess } from './visualize_process.js';
+import { executeCheckConformance } from './check_conformance.js';
 import { SAPAdapter } from '../adapters/adapter.js';
 
 export type ToolExecutor = (adapter: SAPAdapter, input: unknown) => Promise<unknown>;
@@ -152,6 +167,7 @@ export const toolExecutors: Record<string, ToolExecutor> = {
   ask_process: executeAskProcess,
   export_ocel: executeExportOcel,
   visualize_process: executeVisualizeProcess,
+  check_conformance: executeCheckConformance,
 };
 
 /**
