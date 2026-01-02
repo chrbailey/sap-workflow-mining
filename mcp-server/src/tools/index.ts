@@ -77,6 +77,14 @@ export {
   type AskProcessInput,
 } from './ask_process.js';
 
+// Tool 10: Export OCEL
+export {
+  exportOcelTool,
+  executeExportOcel,
+  ExportOcelSchema,
+  type ExportOcelInput,
+} from './export_ocel.js';
+
 /**
  * All tool definitions for MCP registration
  */
@@ -89,6 +97,7 @@ import { getDeliveryTimingTool } from './get_delivery_timing.js';
 import { getInvoiceTimingTool } from './get_invoice_timing.js';
 import { getMasterStubTool } from './get_master_stub.js';
 import { askProcessTool } from './ask_process.js';
+import { exportOcelTool } from './export_ocel.js';
 
 export const allTools = [
   searchDocTextTool,
@@ -100,6 +109,7 @@ export const allTools = [
   getInvoiceTimingTool,
   getMasterStubTool,
   askProcessTool,
+  exportOcelTool,
 ];
 
 /**
@@ -114,6 +124,7 @@ import { executeGetDeliveryTiming } from './get_delivery_timing.js';
 import { executeGetInvoiceTiming } from './get_invoice_timing.js';
 import { executeGetMasterStub } from './get_master_stub.js';
 import { executeAskProcess } from './ask_process.js';
+import { executeExportOcel } from './export_ocel.js';
 import { SAPAdapter } from '../adapters/adapter.js';
 
 export type ToolExecutor = (adapter: SAPAdapter, input: unknown) => Promise<unknown>;
@@ -128,6 +139,7 @@ export const toolExecutors: Record<string, ToolExecutor> = {
   get_invoice_timing: executeGetInvoiceTiming,
   get_master_stub: executeGetMasterStub,
   ask_process: executeAskProcess,
+  export_ocel: executeExportOcel,
 };
 
 /**
