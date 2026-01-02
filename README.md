@@ -7,6 +7,9 @@
 **Zero migration** - Works with your existing ECC system
 **Fast time to value** - Hours to first insights, not months
 
+[![CI](https://github.com/chrbailey/sap-workflow-mining/actions/workflows/ci.yml/badge.svg)](https://github.com/chrbailey/sap-workflow-mining/actions)
+[![v2.0.0](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/chrbailey/sap-workflow-mining/releases/tag/v2.0.0)
+
 ---
 
 ## 60-Second Quickstart
@@ -69,6 +72,98 @@ See [Installation Guide](docs/adapter_guide.md) for detailed setup instructions.
 
 ---
 
+## v2.0 Features
+
+### Natural Language Interface
+
+Ask questions about your SAP processes in plain English:
+
+```
+User: "Why are orders from sales org 1000 taking longer to ship?"
+
+System: Based on analysis of 5,234 orders:
+- Average delay: 4.2 days vs 1.8 days for other orgs
+- Root cause: 73% have "CREDIT HOLD" in notes
+- Recommendation: Review credit check thresholds for org 1000
+
+Confidence: HIGH | Evidence: 847 documents analyzed
+```
+
+Supports multiple LLM providers:
+- **Ollama** (local, private) - Default for air-gapped environments
+- **OpenAI** (GPT-4) - For cloud deployments
+- **Anthropic** (Claude) - Alternative cloud option
+
+### OCEL 2.0 Export
+
+Export to the [Object-Centric Event Log](https://www.ocel-standard.org/) standard for advanced process mining:
+
+```json
+{
+  "ocel:version": "2.0",
+  "ocel:objectTypes": ["order", "item", "delivery", "invoice"],
+  "ocel:events": [...],
+  "ocel:objects": [...]
+}
+```
+
+- Captures multi-object relationships (order → items → deliveries → invoices)
+- Compatible with PM4Py, Celonis, and other OCEL tools
+- Export formats: JSON, XML, SQLite
+
+### Conformance Checking
+
+Compare actual SAP processes against expected Order-to-Cash models:
+
+```
+Conformance Report: 94.2% (4,712 / 5,000 cases)
+
+Deviations Detected:
+├── CRITICAL: Invoice before Goods Issue (23 cases)
+├── MAJOR: Skipped Delivery step (187 cases)
+└── MINOR: Duplicate Order Created (78 cases)
+```
+
+- Pre-built O2C reference models (simple and detailed)
+- Severity scoring: Critical / Major / Minor
+- Deviation types: skipped steps, wrong order, missing activities
+
+### Visual Process Maps
+
+Generate process flow diagrams with bottleneck highlighting:
+
+```mermaid
+graph LR
+    A[Order Created] -->|2.1 days| B[Delivery Created]
+    B -->|0.5 days| C[Goods Issued]
+    C -->|3.2 days| D[Invoice Created]
+
+    style C fill:#f8d7da
+```
+
+- Output formats: Mermaid (Markdown), GraphViz (DOT), SVG
+- Color-coded bottleneck severity (green/yellow/red)
+- Timing annotations between process steps
+
+### Predictive Monitoring
+
+ML-based prediction for process outcomes:
+
+```
+Order 0000012345 - Risk Assessment:
+├── Late Delivery: 78% probability (HIGH RISK)
+│   └── Factors: credit_block, order_value > $50k
+├── Credit Hold: 45% probability (MEDIUM RISK)
+└── Est. Completion: 8.2 days
+```
+
+- Predict: late delivery, credit hold, completion time
+- 29 extracted features from process events
+- Configurable alert thresholds
+- Model types: Random Forest, Gradient Boosting, Ensemble
+
+---
+
 ## Why This Instead of S/4HANA?
 
 | Consideration | S/4HANA Migration | SAP Workflow Mining |
@@ -104,6 +199,29 @@ See [docs/adapter_guide.md](docs/adapter_guide.md) for:
 - OData adapter configuration for S/4HANA
 - CSV import from SE16 exports
 - Air-gapped installation options
+
+### LLM Configuration (v2.0)
+
+Configure the natural language interface in `.env`:
+
+```bash
+# Option 1: Local Ollama (default, private)
+LLM_PROVIDER=ollama
+OLLAMA_HOST=http://localhost:11434
+LLM_MODEL=llama3
+
+# Option 2: OpenAI
+LLM_PROVIDER=openai
+LLM_API_KEY=sk-...
+LLM_MODEL=gpt-4
+
+# Option 3: Anthropic
+LLM_PROVIDER=anthropic
+LLM_API_KEY=sk-ant-...
+LLM_MODEL=claude-3-sonnet-20240229
+```
+
+For air-gapped environments, use Ollama with locally downloaded models.
 
 ---
 
@@ -405,6 +523,16 @@ await mcp.callTool('ps_resume_agent', { agent_id: 'agent-123' });
 | `get_delivery_timing` | Requested vs actual delivery | timestamps, variance analysis |
 | `get_invoice_timing` | Invoice creation/posting | invoice dates, accounting refs |
 | `get_master_stub` | Safe master data attributes | hashed IDs, categories (no PII) |
+
+### Process Mining Tools (v2.0)
+
+| Tool | Purpose | Returns |
+|------|---------|---------|
+| `ask_process` | Natural language queries | answer, confidence, evidence, recommendations |
+| `export_ocel` | Export to OCEL 2.0 format | OCEL JSON/XML with objects and events |
+| `check_conformance` | Compare against O2C model | conformance_rate, deviations, severity_summary |
+| `visualize_process` | Generate process diagrams | Mermaid/DOT/SVG with bottleneck highlighting |
+| `predict_outcome` | ML-based outcome prediction | predictions, alerts, risk_levels, factors |
 
 ### Governance Tools
 
