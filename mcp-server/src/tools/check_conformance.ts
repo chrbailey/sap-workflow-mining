@@ -1,10 +1,14 @@
 /**
  * Tool: check_conformance
  *
- * Phase 3 - Conformance Checking for SAP Order-to-Cash Process
+ * Conformance Checking for SAP Processes (O2C and P2P)
  *
- * Compares actual SAP process flows against the expected O2C reference model
+ * Compares actual SAP process flows against reference models
  * to detect deviations, score severity, and calculate conformance rates.
+ *
+ * Supports:
+ * - O2C (Order-to-Cash): Sales order → Delivery → Invoice
+ * - P2P (Purchase-to-Pay): PO → Goods Receipt → Invoice → Payment
  */
 
 import { z } from 'zod';
@@ -15,6 +19,18 @@ import {
   withTimeout,
   getPolicyConfig,
 } from '../policies/limits.js';
+import {
+  ConformanceChecker,
+  createChecker,
+  Trace,
+  TraceEvent,
+  ConformanceResult as CheckerResult,
+  getDefaultModel,
+  getModelById,
+  listModels,
+  ReferenceModel,
+} from '../conformance/index.js';
+import { BPITrace } from '../adapters/bpi/index.js';
 
 // ============================================================================
 // Type Definitions
@@ -191,11 +207,17 @@ export const CheckConformanceSchema = z.object({
   doc_numbers: z.array(z.string()).optional().describe(
     'Specific document numbers to check. If omitted, checks recent documents.'
   ),
+  model_id: z.string().optional().describe(
+    'Reference model ID (e.g., "o2c-simple", "p2p-detailed"). Auto-detected if omitted.'
+  ),
   include_deviations: z.boolean().default(true).describe(
     'Include detailed deviation information in results'
   ),
   severity_filter: z.enum(['all', 'critical', 'major', 'minor']).default('all').describe(
     'Filter results by severity level'
+  ),
+  max_traces: z.number().int().min(1).max(10000).default(100).describe(
+    'Maximum number of traces to analyze'
   ),
 });
 
@@ -210,42 +232,61 @@ export type CheckConformanceInput = z.infer<typeof CheckConformanceSchema>;
  */
 export const checkConformanceTool = {
   name: 'check_conformance',
-  description: `Check conformance of SAP Order-to-Cash process flows against the expected reference model.
+  description: `Check conformance of SAP processes against reference models.
 
-Analyzes actual process executions and detects deviations such as:
-- Skipped steps (required activities not performed)
-- Wrong order (activities executed in incorrect sequence)
-- Missing activities (expected activities not found)
-- Unexpected activities (activities not in the reference model)
+Supports both O2C (Order-to-Cash) and P2P (Purchase-to-Pay) processes.
+Auto-detects the process type from the data adapter.
+
+Available Models:
+- o2c-simple: Basic O2C (Order → Delivery → GI → Invoice)
+- o2c-detailed: Full O2C with credit check, picking, packing, payment
+- p2p-simple: Basic P2P (PO → GR → Invoice → Payment)
+- p2p-detailed: Full P2P with requisition, SRM approval, 3-way match
+
+Detects deviations such as:
+- Missing activities (required steps not performed)
+- Wrong order (activities in incorrect sequence)
+- Unexpected activities (not in reference model)
+- Repeated activities (potential rework)
 
 Severity levels:
-- Critical: Missing required steps (delivery, invoice), wrong document sequence
-- Major: Skipped optional but important steps, significant timing violations
-- Minor: Minor sequence variations, repeated activities
+- Critical: Missing required steps, wrong sequence of core activities
+- Major: Skipped important optional steps, unexpected activities
+- Minor: Repeated activities, minor sequence variations
 
 Use this tool to:
-- Audit process compliance across sales orders
+- Audit process compliance across orders
 - Identify process bottlenecks and exceptions
-- Generate conformance reports for management
+- Generate conformance reports
 - Detect systematic process violations
+- Compare actual vs expected process flows
 
 Parameters:
-- doc_numbers: Array of specific sales order numbers to check (optional, checks recent if omitted)
+- doc_numbers: Specific document numbers to check (optional)
+- model_id: Reference model to use (auto-detected if omitted)
 - include_deviations: Include detailed deviation list (default: true)
-- severity_filter: Filter by 'all', 'critical', 'major', or 'minor' (default: 'all')
+- severity_filter: Filter by 'all', 'critical', 'major', 'minor' (default: 'all')
+- max_traces: Maximum traces to analyze (default: 100)
 
 Returns:
 - conformance_rate: Overall conformance percentage (0-100%)
+- fitness_score: Alignment-based fitness (0-1)
 - total_cases: Number of cases analyzed
-- conforming_cases: Number of cases with no deviations
-- deviations: Detailed list of detected deviations`,
+- conforming_cases: Cases with no deviations
+- deviations: Detailed deviation list
+- top_deviations: Most common deviation patterns`,
   inputSchema: {
     type: 'object' as const,
     properties: {
       doc_numbers: {
         type: 'array',
         items: { type: 'string' },
-        description: 'Specific sales order numbers to check (optional)',
+        description: 'Specific document numbers to check (optional)',
+      },
+      model_id: {
+        type: 'string',
+        enum: ['o2c-simple', 'o2c-detailed', 'p2p-simple', 'p2p-detailed'],
+        description: 'Reference model ID (auto-detected if omitted)',
       },
       include_deviations: {
         type: 'boolean',
@@ -255,6 +296,10 @@ Returns:
         type: 'string',
         enum: ['all', 'critical', 'major', 'minor'],
         description: 'Filter results by severity level (default: all)',
+      },
+      max_traces: {
+        type: 'number',
+        description: 'Maximum traces to analyze (default: 100)',
       },
     },
     required: [],
@@ -524,6 +569,239 @@ async function analyzeCase(
 // ============================================================================
 
 /**
+ * Check if adapter is a BPI adapter (supports P2P)
+ */
+function isBPIAdapter(adapter: SAPAdapter): adapter is SAPAdapter & { getTraces(): BPITrace[] } {
+  return adapter.name === 'BPI Challenge 2019' &&
+         typeof (adapter as unknown as { getTraces?: () => BPITrace[] }).getTraces === 'function';
+}
+
+/**
+ * Convert BPI traces to conformance checker format
+ */
+function convertBPITracesToCheckerFormat(bpiTraces: BPITrace[]): Trace[] {
+  return bpiTraces.map(bpiTrace => ({
+    caseId: bpiTrace.case_id,
+    events: bpiTrace.events.map(event => ({
+      activity: event.activity,
+      timestamp: event.timestamp,
+      attributes: {
+        user: event.user,
+        org: event.org,
+        resource: event.resource,
+      },
+    })),
+  }));
+}
+
+/**
+ * Execute P2P conformance check using BPI adapter
+ */
+async function executeP2PConformance(
+  adapter: SAPAdapter & { getTraces(): BPITrace[] },
+  input: CheckConformanceInput,
+  auditContext: ReturnType<typeof createAuditContext>
+): Promise<ConformanceResult> {
+  // Get traces from BPI adapter
+  const bpiTraces = adapter.getTraces();
+
+  // Filter by doc_numbers if provided
+  let filteredTraces = bpiTraces;
+  if (input.doc_numbers && input.doc_numbers.length > 0) {
+    const docSet = new Set(input.doc_numbers);
+    filteredTraces = bpiTraces.filter(t => docSet.has(t.case_id));
+  }
+
+  // Apply max_traces limit
+  filteredTraces = filteredTraces.slice(0, input.max_traces);
+
+  // Convert to checker format
+  const traces = convertBPITracesToCheckerFormat(filteredTraces);
+
+  // Select reference model
+  let model: ReferenceModel;
+  if (input.model_id) {
+    const selectedModel = getModelById(input.model_id);
+    if (!selectedModel) {
+      throw new Error(`Unknown model: ${input.model_id}. Available: ${listModels().map(m => m.id).join(', ')}`);
+    }
+    model = selectedModel;
+  } else {
+    // Default to P2P detailed for BPI data
+    model = getModelById('p2p-detailed') || getDefaultModel('P2P');
+  }
+
+  // Create checker and analyze
+  const checker = createChecker(model);
+  const result = checker.analyzeTraces(traces);
+
+  // Apply severity filter if needed
+  let deviations = result.deviations;
+  if (input.severity_filter !== 'all') {
+    deviations = deviations.filter(d => d.severity === input.severity_filter);
+  }
+
+  // Build result in our format
+  const conformanceResult: ConformanceResult = {
+    conformance_rate: result.conformance_rate,
+    total_cases: result.total_cases,
+    conforming_cases: result.conforming_cases,
+    non_conforming_cases: result.non_conforming_cases,
+    severity_summary: result.severity_summary,
+    deviation_type_summary: {
+      skipped_step: result.deviation_type_summary.skipped_activity || 0,
+      wrong_order: result.deviation_type_summary.wrong_order || 0,
+      unexpected_activity: result.deviation_type_summary.unexpected_activity || 0,
+      missing_activity: result.deviation_type_summary.missing_activity || 0,
+      repeated_activity: result.deviation_type_summary.repeated_activity || 0,
+      timing_violation: result.deviation_type_summary.timing_violation || 0,
+    },
+    deviations: input.include_deviations ? deviations.map(d => {
+      const deviation: Deviation = {
+        case_id: d.case_id,
+        deviation_type: d.deviation_type === 'skipped_activity' ? 'skipped_step' : d.deviation_type as DeviationType,
+        severity: d.severity,
+        description: d.description,
+        expected: d.expected,
+        actual: d.actual,
+      };
+      if (d.activity) deviation.activity = d.activity;
+      if (d.position !== undefined) deviation.position = d.position;
+      return deviation;
+    }) : [],
+    metadata: {
+      analyzed_at: result.metadata.analyzed_at,
+      reference_model: `${result.metadata.reference_model} v${result.metadata.model_version}`,
+      filters_applied: {
+        severity_filter: input.severity_filter,
+        ...(input.doc_numbers ? { doc_numbers: input.doc_numbers } : {}),
+      },
+    },
+  };
+
+  auditContext.success(result.total_cases);
+  return conformanceResult;
+}
+
+/**
+ * Execute O2C conformance check using standard SAP adapter
+ */
+async function executeO2CConformance(
+  adapter: SAPAdapter,
+  input: CheckConformanceInput,
+  auditContext: ReturnType<typeof createAuditContext>
+): Promise<ConformanceResult> {
+  const config = getPolicyConfig();
+  let docNumbers = input.doc_numbers || [];
+
+  // If no specific documents provided, search for recent orders
+  if (docNumbers.length === 0) {
+    try {
+      const now = new Date();
+      const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+      const dateTo = now.toISOString().split('T')[0] as string;
+      const dateFrom = thirtyDaysAgo.toISOString().split('T')[0] as string;
+
+      const searchResults = await withTimeout(
+        adapter.searchDocText({
+          pattern: '.*',
+          doc_type: 'sales',
+          date_from: dateFrom,
+          date_to: dateTo,
+          limit: 50,
+        }),
+        config.defaultTimeoutMs,
+        'check_conformance:search'
+      ).catch(() => []);
+
+      docNumbers = [...new Set(
+        searchResults
+          .filter(r => r.doc_type === 'sales' || r.doc_type === 'order')
+          .map(r => r.doc_key)
+      )];
+    } catch {
+      docNumbers = [];
+    }
+  }
+
+  // Enforce limits
+  docNumbers = enforceRowLimit(docNumbers, 200, auditContext);
+  docNumbers = docNumbers.slice(0, input.max_traces);
+
+  // Analyze each case using legacy O2C analysis
+  const allDeviations: Deviation[] = [];
+  let conformingCases = 0;
+  const severityCounts = { critical: 0, major: 0, minor: 0 };
+  const deviationTypeCounts: Record<DeviationType, number> = {
+    skipped_step: 0,
+    wrong_order: 0,
+    unexpected_activity: 0,
+    missing_activity: 0,
+    repeated_activity: 0,
+    timing_violation: 0,
+  };
+
+  for (const docNumber of docNumbers) {
+    const result = await analyzeCase(adapter, docNumber, config);
+
+    if (result.conforming) {
+      conformingCases++;
+    } else {
+      let filteredDeviations = result.deviations;
+      if (input.severity_filter !== 'all') {
+        filteredDeviations = result.deviations.filter(
+          d => d.severity === input.severity_filter
+        );
+      }
+
+      for (const deviation of result.deviations) {
+        severityCounts[deviation.severity]++;
+        deviationTypeCounts[deviation.deviation_type]++;
+      }
+
+      if (input.include_deviations) {
+        allDeviations.push(...filteredDeviations);
+      }
+    }
+  }
+
+  const totalCases = docNumbers.length;
+  const conformanceRate = totalCases > 0
+    ? Math.round((conformingCases / totalCases) * 100 * 100) / 100
+    : 0;
+
+  // Select reference model name
+  let modelName = 'SAP O2C Standard v1.0';
+  if (input.model_id) {
+    const selectedModel = getModelById(input.model_id);
+    if (selectedModel) {
+      modelName = `${selectedModel.name} v${selectedModel.version}`;
+    }
+  }
+
+  const result: ConformanceResult = {
+    conformance_rate: conformanceRate,
+    total_cases: totalCases,
+    conforming_cases: conformingCases,
+    non_conforming_cases: totalCases - conformingCases,
+    severity_summary: severityCounts,
+    deviation_type_summary: deviationTypeCounts,
+    deviations: input.include_deviations ? allDeviations : [],
+    metadata: {
+      analyzed_at: new Date().toISOString(),
+      reference_model: modelName,
+      filters_applied: {
+        severity_filter: input.severity_filter,
+        ...(input.doc_numbers ? { doc_numbers: input.doc_numbers } : {}),
+      },
+    },
+  };
+
+  auditContext.success(totalCases);
+  return result;
+}
+
+/**
  * Execute the check_conformance tool
  */
 export async function executeCheckConformance(
@@ -541,117 +819,14 @@ export async function executeCheckConformance(
   );
 
   try {
-    const config = getPolicyConfig();
-    let docNumbers = input.doc_numbers || [];
-
-    // If no specific documents provided, search for recent orders
-    if (docNumbers.length === 0) {
-      try {
-        // Calculate date range for last 30 days
-        const now = new Date();
-        const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-        const dateTo = now.toISOString().split('T')[0] as string;
-        const dateFrom = thirtyDaysAgo.toISOString().split('T')[0] as string;
-
-        const searchResults = await withTimeout(
-          adapter.searchDocText({
-            pattern: '.*',
-            doc_type: 'sales',
-            date_from: dateFrom,
-            date_to: dateTo,
-            limit: 50,
-          }),
-          config.defaultTimeoutMs,
-          'check_conformance:search'
-        ).catch(() => []);
-
-        docNumbers = [...new Set(
-          searchResults
-            .filter(r => r.doc_type === 'sales' || r.doc_type === 'order')
-            .map(r => r.doc_key)
-        )];
-      } catch {
-        // If search fails, return empty result
-        docNumbers = [];
-      }
+    // Detect adapter type and route to appropriate implementation
+    if (isBPIAdapter(adapter)) {
+      // P2P conformance checking using new conformance module
+      return await executeP2PConformance(adapter, input, auditContext);
+    } else {
+      // O2C conformance checking using legacy implementation
+      return await executeO2CConformance(adapter, input, auditContext);
     }
-
-    // Enforce row limit
-    docNumbers = enforceRowLimit(docNumbers, 200, auditContext);
-
-    // Analyze each case
-    const allDeviations: Deviation[] = [];
-    let conformingCases = 0;
-    const severityCounts = { critical: 0, major: 0, minor: 0 };
-    const deviationTypeCounts: Record<DeviationType, number> = {
-      skipped_step: 0,
-      wrong_order: 0,
-      unexpected_activity: 0,
-      missing_activity: 0,
-      repeated_activity: 0,
-      timing_violation: 0,
-    };
-
-    for (const docNumber of docNumbers) {
-      const result = await analyzeCase(adapter, docNumber, config);
-
-      if (result.conforming) {
-        conformingCases++;
-      } else {
-        // Apply severity filter
-        let filteredDeviations = result.deviations;
-        if (input.severity_filter !== 'all') {
-          filteredDeviations = result.deviations.filter(
-            d => d.severity === input.severity_filter
-          );
-        }
-
-        // Count deviations
-        for (const deviation of result.deviations) {
-          severityCounts[deviation.severity]++;
-          deviationTypeCounts[deviation.deviation_type]++;
-        }
-
-        // Add to results if including deviations
-        if (input.include_deviations) {
-          allDeviations.push(...filteredDeviations);
-        }
-      }
-    }
-
-    // Calculate conformance rate
-    const totalCases = docNumbers.length;
-    const conformanceRate = totalCases > 0
-      ? Math.round((conformingCases / totalCases) * 100 * 100) / 100
-      : 0;
-
-    // Build result
-    const filtersApplied: { doc_numbers?: string[]; severity_filter: string } = {
-      severity_filter: input.severity_filter,
-    };
-    if (input.doc_numbers) {
-      filtersApplied.doc_numbers = input.doc_numbers;
-    }
-
-    const result: ConformanceResult = {
-      conformance_rate: conformanceRate,
-      total_cases: totalCases,
-      conforming_cases: conformingCases,
-      non_conforming_cases: totalCases - conformingCases,
-      severity_summary: severityCounts,
-      deviation_type_summary: deviationTypeCounts,
-      deviations: input.include_deviations ? allDeviations : [],
-      metadata: {
-        analyzed_at: new Date().toISOString(),
-        reference_model: 'SAP O2C Standard v1.0',
-        filters_applied: filtersApplied,
-      },
-    };
-
-    // Log success
-    auditContext.success(totalCases);
-
-    return result;
   } catch (error) {
     auditContext.error(error as Error);
     throw error;
