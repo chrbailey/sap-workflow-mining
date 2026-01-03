@@ -38,6 +38,11 @@ htmlcov/
 .jest/
 
 # Generated output (keep .gitkeep)
+output/*.json
+output/*.mmd
+output/*.dot
+output/*.svg
+output/*.png
 output/datasphere_analysis/
 output/e2e_test/
 pattern-engine/csv_test_output/
