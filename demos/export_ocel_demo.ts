@@ -1,22 +1,21 @@
 #!/usr/bin/env npx tsx
 /**
- * Demo: export_ocel Tool
+ * Demo: export_ocel Tool with BPI Challenge 2019 Data
  *
- * This demo shows how to export SAP Order-to-Cash data in OCEL 2.0 format
- * for use with process mining tools like PM4Py, Celonis, etc.
- *
- * Prerequisites:
- *   - No external dependencies - uses synthetic adapter
+ * Demonstrates exporting SAP P2P process data to OCEL 2.0 format
+ * for use with PM4Py, Celonis, and other process mining tools.
  *
  * Usage:
- *   cd mcp-server
- *   npx tsx ../demos/export_ocel_demo.ts
+ *   npx tsx demos/export_ocel_demo.ts
+ *   npx tsx demos/export_ocel_demo.ts --max-traces=1000
  */
 
+import { BPIAdapter } from '../mcp-server/src/adapters/bpi/index.js';
 import { executeExportOcel } from '../mcp-server/src/tools/export_ocel.js';
-import { SyntheticAdapter } from '../mcp-server/src/adapters/synthetic/index.js';
+import { writeFile } from 'fs/promises';
+import { join } from 'path';
 
-// ANSI colors for terminal output
+// ANSI colors
 const colors = {
   reset: '\x1b[0m',
   bright: '\x1b[1m',
@@ -25,7 +24,6 @@ const colors = {
   green: '\x1b[32m',
   yellow: '\x1b[33m',
   blue: '\x1b[34m',
-  magenta: '\x1b[35m',
 };
 
 function printHeader(text: string): void {
@@ -34,92 +32,122 @@ function printHeader(text: string): void {
   console.log(`${colors.cyan}${'═'.repeat(70)}${colors.reset}\n`);
 }
 
-function printSection(title: string): void {
-  console.log(`${colors.bright}${colors.yellow}${title}${colors.reset}`);
-}
+async function main() {
+  printHeader('OCEL 2.0 Export Demo - BPI Challenge 2019');
 
-async function runDemo(): Promise<void> {
-  printHeader('SAP Workflow Mining - export_ocel Demo');
+  // Parse args
+  const args = process.argv.slice(2);
+  let maxTraces = 0;
+  let outputFile = '';
 
-  // Create synthetic adapter
-  console.log(`${colors.dim}Creating synthetic SAP adapter...${colors.reset}`);
-  const adapter = new SyntheticAdapter();
+  for (const arg of args) {
+    if (arg.startsWith('--max-traces=')) {
+      maxTraces = parseInt(arg.split('=')[1] || '0', 10);
+    } else if (arg.startsWith('--output=')) {
+      outputFile = arg.split('=')[1] || '';
+    }
+  }
+
+  // Initialize adapter
+  console.log(`${colors.dim}Loading BPI Challenge 2019 data...${colors.reset}`);
+  const adapter = new BPIAdapter();
   await adapter.initialize();
-  console.log(`${colors.green}✓ Adapter ready${colors.reset}\n`);
 
-  printHeader('OCEL 2.0 Export');
+  const stats = adapter.getStats();
+  if (stats) {
+    console.log(`${colors.green}✓ Loaded ${stats.processed_cases.toLocaleString()} cases with ${stats.total_events.toLocaleString()} events${colors.reset}`);
+    console.log(`${colors.dim}  Activities: ${stats.unique_activities} | Vendors: ${stats.unique_vendors.toLocaleString()}${colors.reset}\n`);
+  }
 
-  console.log(`${colors.dim}Exporting Order-to-Cash data in OCEL 2.0 format...${colors.reset}\n`);
+  // Export to OCEL 2.0
+  printHeader('Exporting to OCEL 2.0 Format');
 
-  try {
-    const startTime = Date.now();
+  console.log(`${colors.dim}Export options:${colors.reset}`);
+  console.log(`  Max traces: ${maxTraces || 'all'}`);
+  console.log(`  Include relationships: true`);
+  console.log(`  Include items: true\n`);
 
-    const result = await executeExportOcel(adapter, {
-      date_from: '2024-01-01',
-      date_to: '2024-12-31',
-      output_format: 'json',
-      include_items: true,
-    });
+  const startTime = Date.now();
 
-    const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+  const result = await executeExportOcel(adapter, {
+    max_traces: maxTraces,
+    include_relationships: true,
+    include_items: true,
+    output_format: 'json',
+  });
 
-    // Display OCEL structure summary
-    printSection('OCEL 2.0 Structure:');
-    console.log(`${colors.dim}─────────────────────────────────────${colors.reset}`);
+  const duration = ((Date.now() - startTime) / 1000).toFixed(2);
 
-    const objectTypeNames = Object.keys(result.objectTypes);
-    const eventTypeNames = Object.keys(result.eventTypes);
-    const objectEntries = Object.entries(result.objects);
-    const eventEntries = Object.entries(result.events);
+  // Print results
+  printHeader('Export Results');
 
-    console.log(`\n${colors.bright}Object Types:${colors.reset}`);
-    for (const typeName of objectTypeNames) {
-      const objType = result.objectTypes[typeName];
-      const count = objectEntries.filter(([_, o]) => o.type === typeName).length;
-      console.log(`  ${colors.cyan}•${colors.reset} ${typeName}: ${count} objects`);
-      if (objType.attributes && objType.attributes.length > 0) {
-        console.log(`    ${colors.dim}Attributes: ${objType.attributes.map(a => a.name).join(', ')}${colors.reset}`);
+  console.log(`${colors.bright}Format:${colors.reset} ${result.format}`);
+  console.log(`${colors.bright}Process Type:${colors.reset} ${result.processType}\n`);
+
+  console.log(`${colors.bright}Statistics:${colors.reset}`);
+  console.log(`  Total Events: ${result.stats.totalEvents.toLocaleString()}`);
+  console.log(`  Total Objects: ${result.stats.totalObjects.toLocaleString()}`);
+  console.log(`  Event Types: ${result.stats.eventTypes}`);
+  console.log(`  Object Types: ${result.stats.objectTypes}\n`);
+
+  console.log(`${colors.dim}Export Time: ${duration}s${colors.reset}\n`);
+
+  // Show sample of OCEL structure
+  if (result.ocel) {
+    printHeader('OCEL 2.0 Structure Sample');
+
+    console.log(`${colors.bright}Object Types:${colors.reset}`);
+    for (const objType of result.ocel.objectTypes) {
+      console.log(`  - ${objType.name}`);
+      for (const attr of objType.attributes.slice(0, 3)) {
+        console.log(`      ${colors.dim}${attr.name}: ${attr.type}${colors.reset}`);
       }
     }
 
-    console.log(`\n${colors.bright}Event Types:${colors.reset}`);
-    for (const typeName of eventTypeNames) {
-      const count = eventEntries.filter(([_, e]) => e.type === typeName).length;
-      console.log(`  ${colors.magenta}•${colors.reset} ${typeName}: ${count} events`);
+    console.log(`\n${colors.bright}Event Types (first 5):${colors.reset}`);
+    for (const eventType of result.ocel.eventTypes.slice(0, 5)) {
+      console.log(`  - ${eventType.name}`);
+    }
+    if (result.ocel.eventTypes.length > 5) {
+      console.log(`  ${colors.dim}... and ${result.ocel.eventTypes.length - 5} more${colors.reset}`);
     }
 
-    console.log(`\n${colors.bright}Summary:${colors.reset}`);
-    console.log(`  Total Objects: ${colors.green}${objectEntries.length}${colors.reset}`);
-    console.log(`  Total Events: ${colors.green}${eventEntries.length}${colors.reset}`);
-
-    // Show sample event
-    if (eventEntries.length > 0) {
-      console.log(`\n${colors.bright}Sample Event:${colors.reset}`);
-      const [id, sample] = eventEntries[0];
-      console.log(`${colors.dim}${id}: ${JSON.stringify(sample, null, 2)}${colors.reset}`);
+    console.log(`\n${colors.bright}Sample Events (first 3):${colors.reset}`);
+    for (const event of result.ocel.events.slice(0, 3)) {
+      console.log(`  [${event.id}] ${event.type}`);
+      console.log(`      ${colors.dim}Time: ${event.time}${colors.reset}`);
+      console.log(`      ${colors.dim}Related objects: ${event.relationships.map(r => r.objectId).join(', ')}${colors.reset}`);
     }
 
-    // Show sample object
-    if (objectEntries.length > 0) {
-      console.log(`\n${colors.bright}Sample Object:${colors.reset}`);
-      const [id, sample] = objectEntries[0];
-      console.log(`${colors.dim}${id}: ${JSON.stringify(sample, null, 2)}${colors.reset}`);
+    console.log(`\n${colors.bright}Sample Objects (first 3):${colors.reset}`);
+    for (const obj of result.ocel.objects.slice(0, 3)) {
+      console.log(`  [${obj.id}] ${obj.type}`);
+      const attrSummary = obj.attributes.slice(0, 2).map(a => `${a.name}=${a.value}`).join(', ');
+      console.log(`      ${colors.dim}${attrSummary}${colors.reset}`);
     }
-
-    console.log(`\n${colors.dim}─────────────────────────────────────${colors.reset}`);
-    console.log(`${colors.dim}Export Time: ${duration}s${colors.reset}`);
-
-  } catch (error) {
-    console.error(`\n${colors.bright}\x1b[31mError:${colors.reset}`, error);
-    process.exit(1);
   }
 
+  // Save to file if requested
+  const filename = outputFile || join(process.cwd(), 'output', 'bpi_2019_ocel.json');
+  printHeader('Saving OCEL File');
+
+  try {
+    const jsonContent = JSON.stringify(result.ocel, null, 2);
+    await writeFile(filename, jsonContent, 'utf-8');
+    console.log(`${colors.green}✓ Saved to: ${filename}${colors.reset}`);
+    console.log(`${colors.dim}  File size: ${(jsonContent.length / 1024 / 1024).toFixed(2)} MB${colors.reset}`);
+  } catch (error) {
+    console.log(`${colors.yellow}Could not save file: ${(error as Error).message}${colors.reset}`);
+  }
+
+  // Shutdown
+  await adapter.shutdown();
+
   printHeader('Demo Complete');
-  console.log('The OCEL 2.0 export can be used with:');
-  console.log(`  ${colors.dim}• PM4Py - Python process mining library${colors.reset}`);
-  console.log(`  ${colors.dim}• Celonis - Enterprise process mining platform${colors.reset}`);
-  console.log(`  ${colors.dim}• ProM - Academic process mining framework${colors.reset}`);
-  console.log(`  ${colors.dim}• Any OCEL 2.0 compliant tool${colors.reset}\n`);
+  console.log('The OCEL 2.0 file can be imported into:');
+  console.log(`  ${colors.dim}• PM4Py: pm4py.read_ocel('bpi_2019_ocel.json')${colors.reset}`);
+  console.log(`  ${colors.dim}• Celonis: OCEL 2.0 connector${colors.reset}`);
+  console.log(`  ${colors.dim}• Apromore: Object-centric log import${colors.reset}\n`);
 }
 
-runDemo();
+main().catch(console.error);

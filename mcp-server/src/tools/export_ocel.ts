@@ -1,8 +1,9 @@
 /**
  * Tool: export_ocel
  *
- * Exports SAP order-to-cash data in OCEL 2.0 (Object-Centric Event Log) format.
- * Supports both JSON and JSONOCEL output formats for process mining tools.
+ * Exports SAP data in OCEL 2.0 (Object-Centric Event Log) format.
+ * Supports both O2C (Order-to-Cash) and P2P (Purchase-to-Pay) processes.
+ * Compatible with PM4Py, Celonis, and other OCEL-compliant tools.
  */
 
 import { z } from 'zod';
@@ -14,9 +15,15 @@ import {
   getPolicyConfig,
   validateDateRange,
 } from '../policies/limits.js';
+import {
+  OCELLog,
+  OCELExporter,
+  createOCELExporter,
+  OCELExportStats,
+} from '../ocel/index.js';
 
 /**
- * OCEL 2.0 Type Definitions
+ * OCEL 2.0 Type Definitions (legacy format for O2C)
  */
 interface OCELObjectType {
   attributes: Array<{
@@ -66,14 +73,32 @@ interface OCEL2Structure {
 }
 
 /**
+ * Extended result type supporting both formats
+ */
+export interface ExportOcelResult {
+  format: 'ocel2' | 'legacy';
+  processType: 'O2C' | 'P2P';
+  ocel?: OCELLog;
+  legacy?: OCEL2Structure;
+  stats: {
+    totalEvents: number;
+    totalObjects: number;
+    eventTypes: number;
+    objectTypes: number;
+  };
+}
+
+/**
  * Zod schema for input validation
  */
 export const ExportOcelSchema = z.object({
-  date_from: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Date must be YYYY-MM-DD format'),
-  date_to: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Date must be YYYY-MM-DD format'),
+  date_from: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Date must be YYYY-MM-DD format').optional(),
+  date_to: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Date must be YYYY-MM-DD format').optional(),
   sales_org: z.string().optional(),
   output_format: z.enum(['json', 'jsonocel']).default('json'),
   include_items: z.boolean().default(true),
+  include_relationships: z.boolean().default(true),
+  max_traces: z.number().int().min(0).max(100000).default(0),
 });
 
 export type ExportOcelInput = z.infer<typeof ExportOcelSchema>;
@@ -83,40 +108,51 @@ export type ExportOcelInput = z.infer<typeof ExportOcelSchema>;
  */
 export const exportOcelTool = {
   name: 'export_ocel',
-  description: `Export SAP order-to-cash data in OCEL 2.0 format for process mining.
-Creates an object-centric event log with orders, deliveries, invoices, and their items.
+  description: `Export SAP data in OCEL 2.0 (Object-Centric Event Log) format for process mining.
+
+Supports both process types:
+- **O2C (Order-to-Cash)**: Sales orders → Deliveries → Invoices
+- **P2P (Purchase-to-Pay)**: Purchase orders → Goods receipts → Invoices
+
+Compatible with PM4Py, Celonis, Apromore, and other OCEL 2.0 compliant tools.
 
 Use this tool to:
-- Extract process mining data for tools like PM4Py, Celonis, or custom analysis
-- Build object-centric event logs capturing the full order-to-cash flow
+- Extract process mining data for external analysis tools
+- Build object-centric event logs capturing multi-object relationships
 - Export data for conformance checking and process discovery
+- Enable variant analysis across interacting business objects
 
 Parameters:
-- date_from: Start date for orders (YYYY-MM-DD, required)
-- date_to: End date for orders (YYYY-MM-DD, required)
-- sales_org: Filter by sales organization (optional)
-- output_format: 'json' (standard JSON) or 'jsonocel' (OCEL 2.0 format), default 'json'
+- date_from: Start date filter (YYYY-MM-DD, optional)
+- date_to: End date filter (YYYY-MM-DD, optional)
+- sales_org: Filter by sales/purchasing organization (optional)
+- output_format: 'json' (standard) or 'jsonocel' (OCEL 2.0), default 'json'
 - include_items: Include line item objects and events (default true)
+- include_relationships: Include object-to-object relationships (default true)
+- max_traces: Maximum traces to export, 0 = all (default 0)
 
 Returns OCEL 2.0 structure with:
+**For P2P:**
+- Object types: purchase_order, po_item, goods_receipt, invoice, vendor
+- Event types: Create PO, Record GR, Record Invoice, Clear Invoice, etc.
+
+**For O2C:**
 - Object types: order, order_item, delivery, delivery_item, invoice, invoice_item
-- Event types: order_created, item_added, delivery_created, goods_issued, invoice_created
-- Objects with attributes and relationships
-- Events with timestamps and object references`,
+- Event types: order_created, item_added, delivery_created, goods_issued, invoice_created`,
   inputSchema: {
     type: 'object' as const,
     properties: {
       date_from: {
         type: 'string',
-        description: 'Start date for filtering orders (YYYY-MM-DD)',
+        description: 'Start date for filtering (YYYY-MM-DD, optional)',
       },
       date_to: {
         type: 'string',
-        description: 'End date for filtering orders (YYYY-MM-DD)',
+        description: 'End date for filtering (YYYY-MM-DD, optional)',
       },
       sales_org: {
         type: 'string',
-        description: 'Sales organization filter (optional)',
+        description: 'Sales/purchasing organization filter (optional)',
       },
       output_format: {
         type: 'string',
@@ -127,8 +163,16 @@ Returns OCEL 2.0 structure with:
         type: 'boolean',
         description: 'Include line item objects and events (default true)',
       },
+      include_relationships: {
+        type: 'boolean',
+        description: 'Include object-to-object relationships (default true)',
+      },
+      max_traces: {
+        type: 'number',
+        description: 'Maximum traces to export, 0 = all (default 0)',
+      },
     },
-    required: ['date_from', 'date_to'],
+    required: [],
   },
 };
 
@@ -255,12 +299,40 @@ function formatSAPDateTime(date: string, time: string): string {
 }
 
 /**
+ * Detect if adapter is P2P (BPI)
+ */
+function isP2PAdapter(adapter: SAPAdapter): boolean {
+  return adapter.name === 'bpi';
+}
+
+/**
+ * BPI Trace interface for P2P export
+ */
+interface BPITrace {
+  case_id: string;
+  vendor?: string;
+  company?: string;
+  spend_area_text?: string;
+  item_category?: string;
+  item_type?: string;
+  po_document?: string;
+  events: Array<{
+    activity: string;
+    timestamp: string;
+    user?: string;
+    org?: string;
+    resource?: string;
+    [key: string]: unknown;
+  }>;
+}
+
+/**
  * Execute the export_ocel tool
  */
 export async function executeExportOcel(
   adapter: SAPAdapter,
   rawInput: unknown
-): Promise<OCEL2Structure> {
+): Promise<ExportOcelResult> {
   // Validate input
   const input = ExportOcelSchema.parse(rawInput);
 
@@ -268,9 +340,90 @@ export async function executeExportOcel(
   const auditContext = createAuditContext('export_ocel', input as Record<string, unknown>, adapter.name);
 
   try {
-    // Enforce policies
-    enforceToolPolicies('export_ocel', input as Record<string, unknown>, auditContext);
+    // Detect adapter type and route accordingly
+    if (isP2PAdapter(adapter)) {
+      return await executeP2PExport(adapter, input, auditContext);
+    }
+
+    // O2C export (legacy)
+    return await executeO2CExport(adapter, input, auditContext);
+  } catch (error) {
+    auditContext.error(error as Error);
+    throw error;
+  }
+}
+
+/**
+ * Execute P2P export using the new OCEL exporter
+ */
+async function executeP2PExport(
+  adapter: SAPAdapter,
+  input: ExportOcelInput,
+  auditContext: ReturnType<typeof createAuditContext>
+): Promise<ExportOcelResult> {
+  // Get traces from BPI adapter
+  const bpiAdapter = adapter as SAPAdapter & {
+    getTraces: () => BPITrace[];
+  };
+
+  if (!bpiAdapter.getTraces) {
+    throw new Error('BPI adapter does not support getTraces method');
+  }
+
+  const traces = bpiAdapter.getTraces();
+
+  // Create OCEL exporter
+  const exporter = createOCELExporter();
+
+  // Build export options
+  const exportOptions: Parameters<typeof exporter.exportP2P>[1] = {
+    includeO2ORelationships: input.include_relationships,
+    includeAllAttributes: true,
+    maxTraces: input.max_traces || traces.length,
+  };
+
+  // Add date range only if both dates are provided
+  if (input.date_from && input.date_to) {
+    exportOptions.dateRange = { from: input.date_from, to: input.date_to };
+  }
+
+  // Export to OCEL 2.0 format
+  const ocelLog = exporter.exportP2P(traces, exportOptions);
+
+  // Get stats
+  const stats = exporter.getStats(ocelLog);
+
+  // Log success
+  auditContext.success(stats.totalEvents + stats.totalObjects);
+
+  return {
+    format: 'ocel2',
+    processType: 'P2P',
+    ocel: ocelLog,
+    stats: {
+      totalEvents: stats.totalEvents,
+      totalObjects: stats.totalObjects,
+      eventTypes: stats.eventTypes,
+      objectTypes: stats.objectTypes,
+    },
+  };
+}
+
+/**
+ * Execute O2C export (legacy format)
+ */
+async function executeO2CExport(
+  adapter: SAPAdapter,
+  input: ExportOcelInput,
+  auditContext: ReturnType<typeof createAuditContext>
+): Promise<ExportOcelResult> {
+  // Enforce policies
+  enforceToolPolicies('export_ocel', input as Record<string, unknown>, auditContext);
+
+  // Validate date range if provided
+  if (input.date_from && input.date_to) {
     validateDateRange(input.date_from, input.date_to, auditContext);
+  }
 
     const config = getPolicyConfig();
 
@@ -284,16 +437,21 @@ export async function executeExportOcel(
 
     let eventCounter = 0;
 
+    // Build search params
+    const searchParams: Parameters<typeof adapter.searchDocText>[0] = {
+      pattern: '.*', // Match all - we're filtering by date
+      doc_type: 'sales',
+      limit: 200,
+    };
+
+    // Add optional filters
+    if (input.date_from) searchParams.date_from = input.date_from;
+    if (input.date_to) searchParams.date_to = input.date_to;
+    if (input.sales_org) searchParams.org_filters = { VKORG: input.sales_org };
+
     // Step 1: Search for orders in the date range
     const searchResults = await withTimeout(
-      adapter.searchDocText({
-        pattern: '.*', // Match all - we're filtering by date
-        doc_type: 'sales',
-        date_from: input.date_from,
-        date_to: input.date_to,
-        ...(input.sales_org ? { org_filters: { VKORG: input.sales_org } } : {}),
-        limit: 200,
-      }),
+      adapter.searchDocText(searchParams),
       config.defaultTimeoutMs,
       'export_ocel:search'
     ).catch(() => {
@@ -322,13 +480,15 @@ export async function executeExportOcel(
         continue;
       }
 
-      // Filter by date range
-      const orderDate = orderHeader.ERDAT.replace(/-/g, '');
-      const fromDate = input.date_from.replace(/-/g, '');
-      const toDate = input.date_to.replace(/-/g, '');
+      // Filter by date range if specified
+      if (input.date_from && input.date_to) {
+        const orderDate = orderHeader.ERDAT.replace(/-/g, '');
+        const fromDate = input.date_from.replace(/-/g, '');
+        const toDate = input.date_to.replace(/-/g, '');
 
-      if (orderDate < fromDate || orderDate > toDate) {
-        continue;
+        if (orderDate < fromDate || orderDate > toDate) {
+          continue;
+        }
       }
 
       // Filter by sales org if specified
@@ -556,14 +716,20 @@ export async function executeExportOcel(
       }
     }
 
-    // Log success
-    const objectCount = Object.keys(ocel.objects).length;
-    const eventCount = Object.keys(ocel.events).length;
-    auditContext.success(objectCount + eventCount);
+  // Log success
+  const objectCount = Object.keys(ocel.objects).length;
+  const eventCount = Object.keys(ocel.events).length;
+  auditContext.success(objectCount + eventCount);
 
-    return ocel;
-  } catch (error) {
-    auditContext.error(error as Error);
-    throw error;
-  }
+  return {
+    format: 'legacy',
+    processType: 'O2C',
+    legacy: ocel,
+    stats: {
+      totalEvents: eventCount,
+      totalObjects: objectCount,
+      eventTypes: Object.keys(ocel.eventTypes).length,
+      objectTypes: Object.keys(ocel.objectTypes).length,
+    },
+  };
 }

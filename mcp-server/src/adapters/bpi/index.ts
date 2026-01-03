@@ -50,9 +50,9 @@ const __dirname = dirname(__filename);
 const DEFAULT_DATA_DIR = join(__dirname, '..', '..', '..', '..', 'data', 'bpi');
 
 /**
- * BPI trace from converted JSON
+ * BPI trace from converted JSON (internal format)
  */
-interface BPITrace {
+interface BPITraceInternal {
   case_id: string;
   attributes: {
     'concept:name'?: string;
@@ -74,6 +74,27 @@ interface BPITrace {
     [key: string]: unknown;
   };
   events: BPIEvent[];
+}
+
+/**
+ * BPI trace export format for OCEL conversion
+ */
+export interface BPITrace {
+  case_id: string;
+  vendor?: string;
+  company?: string;
+  spend_area_text?: string;
+  item_category?: string;
+  item_type?: string;
+  po_document?: string;
+  events: Array<{
+    activity: string;
+    timestamp: string;
+    user?: string;
+    org?: string;
+    resource?: string;
+    [key: string]: unknown;
+  }>;
 }
 
 /**
@@ -112,11 +133,11 @@ interface BPIStats {
  * Loaded BPI data structure
  */
 interface LoadedBPIData {
-  traces: BPITrace[];
+  traces: BPITraceInternal[];
   stats: BPIStats;
   // Indexes for fast lookup
-  tracesByPO: Map<string, BPITrace[]>;
-  tracesByVendor: Map<string, BPITrace[]>;
+  tracesByPO: Map<string, BPITraceInternal[]>;
+  tracesByVendor: Map<string, BPITraceInternal[]>;
   vendorNames: Map<string, string>;
 }
 
@@ -165,11 +186,11 @@ export class BPIAdapter extends BaseDataAdapter {
     const raw = JSON.parse(await readFile(dataPath, 'utf-8'));
 
     // Build indexes
-    const tracesByPO = new Map<string, BPITrace[]>();
-    const tracesByVendor = new Map<string, BPITrace[]>();
+    const tracesByPO = new Map<string, BPITraceInternal[]>();
+    const tracesByVendor = new Map<string, BPITraceInternal[]>();
     const vendorNames = new Map<string, string>();
 
-    for (const trace of raw.traces as BPITrace[]) {
+    for (const trace of raw.traces as BPITraceInternal[]) {
       // Index by PO
       const po = trace.attributes['Purchasing Document'];
       if (po) {
@@ -225,6 +246,54 @@ export class BPIAdapter extends BaseDataAdapter {
   getAllPONumbers(): string[] {
     if (!this.data) return [];
     return Array.from(this.data.tracesByPO.keys());
+  }
+
+  /**
+   * Get all traces for OCEL export
+   * Returns traces in a format suitable for OCEL 2.0 conversion
+   */
+  getTraces(): BPITrace[] {
+    if (!this.data) return [];
+
+    return this.data.traces.map(trace => {
+      const attrs = trace.attributes;
+      const vendor = attrs['Vendor'] as string | undefined;
+      const company = attrs['Company'] as string | undefined;
+      const spendAreaText = attrs['Spend area text'] as string | undefined;
+      const itemCategory = attrs['Item Category'] as string | undefined;
+      const itemType = attrs['Item Type'] as string | undefined;
+      const poDoc = attrs['Purchasing Document'] as string | undefined;
+
+      // Build result with conditional properties for exactOptionalPropertyTypes
+      const result: BPITrace = {
+        case_id: (attrs['concept:name'] as string) || trace.case_id || '',
+        events: trace.events.map(event => {
+          const eventResult: BPITrace['events'][0] = {
+            activity: (event['concept:name'] as string) || '',
+            timestamp: (event['time:timestamp'] as string) || '',
+          };
+          const user = event['org:resource'] as string | undefined;
+          if (user) {
+            eventResult.user = user;
+            eventResult.resource = user;
+          }
+          if (company) {
+            eventResult.org = company;
+          }
+          return eventResult;
+        }),
+      };
+
+      // Add optional properties only if they have values
+      if (vendor) result.vendor = vendor;
+      if (company) result.company = company;
+      if (spendAreaText) result.spend_area_text = spendAreaText;
+      if (itemCategory) result.item_category = itemCategory;
+      if (itemType) result.item_type = itemType;
+      if (poDoc) result.po_document = poDoc;
+
+      return result;
+    });
   }
 
   // ============================================================================
