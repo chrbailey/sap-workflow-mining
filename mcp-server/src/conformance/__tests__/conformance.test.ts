@@ -1,7 +1,8 @@
 /**
  * Conformance Checking Module Tests
  */
-import { createChecker, Trace } from '../checker.js';
+import { ConformanceChecker, createChecker, Trace } from '../checker.js';
+import { Deviation } from '../types.js';
 import {
   O2C_SIMPLE_MODEL,
   O2C_DETAILED_MODEL,
@@ -132,8 +133,10 @@ describe('Conformance Checking Module', () => {
 
       const result = checker.analyzeTrace(trace);
       expect(result.conforming).toBe(false);
-      expect(result.deviations.some(d => d.deviation_type === 'missing_activity')).toBe(true);
-      expect(result.deviations.some(d => d.activity === 'goods_issued')).toBe(true);
+      expect(
+        result.deviations.some((d: Deviation) => d.deviation_type === 'missing_activity')
+      ).toBe(true);
+      expect(result.deviations.some((d: Deviation) => d.activity === 'goods_issued')).toBe(true);
     });
 
     it('should detect wrong order', () => {
@@ -149,7 +152,9 @@ describe('Conformance Checking Module', () => {
 
       const result = checker.analyzeTrace(trace);
       expect(result.conforming).toBe(false);
-      expect(result.deviations.some(d => d.deviation_type === 'wrong_order')).toBe(true);
+      expect(result.deviations.some((d: Deviation) => d.deviation_type === 'wrong_order')).toBe(
+        true
+      );
     });
 
     it('should detect unexpected activity', () => {
@@ -166,8 +171,10 @@ describe('Conformance Checking Module', () => {
 
       const result = checker.analyzeTrace(trace);
       expect(result.conforming).toBe(false);
-      expect(result.deviations.some(d => d.deviation_type === 'unexpected_activity')).toBe(true);
-      expect(result.deviations.some(d => d.actual === 'unknown_activity')).toBe(true);
+      expect(
+        result.deviations.some((d: Deviation) => d.deviation_type === 'unexpected_activity')
+      ).toBe(true);
+      expect(result.deviations.some((d: Deviation) => d.actual === 'unknown_activity')).toBe(true);
     });
 
     it('should detect repeated activity', () => {
@@ -184,7 +191,9 @@ describe('Conformance Checking Module', () => {
 
       const result = checker.analyzeTrace(trace);
       expect(result.conforming).toBe(false);
-      expect(result.deviations.some(d => d.deviation_type === 'repeated_activity')).toBe(true);
+      expect(
+        result.deviations.some((d: Deviation) => d.deviation_type === 'repeated_activity')
+      ).toBe(true);
     });
 
     it('should map activity names correctly', () => {
@@ -378,10 +387,10 @@ describe('Conformance Checking Module', () => {
 
       const result = checker.analyzeTrace(trace);
       const missingDeviations = result.deviations.filter(
-        d => d.deviation_type === 'missing_activity'
+        (d: Deviation) => d.deviation_type === 'missing_activity'
       );
 
-      expect(missingDeviations.some(d => d.severity === 'critical')).toBe(true);
+      expect(missingDeviations.some((d: Deviation) => d.severity === 'critical')).toBe(true);
     });
 
     it('should classify wrong order as critical', () => {
@@ -395,10 +404,10 @@ describe('Conformance Checking Module', () => {
 
       const result = checker.analyzeTrace(trace);
       const wrongOrderDeviations = result.deviations.filter(
-        d => d.deviation_type === 'wrong_order'
+        (d: Deviation) => d.deviation_type === 'wrong_order'
       );
 
-      expect(wrongOrderDeviations.some(d => d.severity === 'critical')).toBe(true);
+      expect(wrongOrderDeviations.some((d: Deviation) => d.severity === 'critical')).toBe(true);
     });
 
     it('should classify unexpected activity as major', () => {
@@ -412,7 +421,7 @@ describe('Conformance Checking Module', () => {
 
       const result = checker.analyzeTrace(trace);
       const unexpectedDeviations = result.deviations.filter(
-        d => d.deviation_type === 'unexpected_activity'
+        (d: Deviation) => d.deviation_type === 'unexpected_activity'
       );
 
       expect(unexpectedDeviations[0]!.severity).toBe('major');
@@ -432,7 +441,7 @@ describe('Conformance Checking Module', () => {
 
       const result = checker.analyzeTrace(trace);
       const repeatedDeviations = result.deviations.filter(
-        d => d.deviation_type === 'repeated_activity'
+        (d: Deviation) => d.deviation_type === 'repeated_activity'
       );
 
       expect(repeatedDeviations[0]!.severity).toBe('minor');
