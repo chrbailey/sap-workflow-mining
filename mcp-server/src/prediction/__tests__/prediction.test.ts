@@ -34,12 +34,17 @@ describe('Predictive Monitoring Module', () => {
   // Sample test data
   const createSampleCase = (caseId: string, events: Array<{ activity: string; timestamp: string; resource?: string }>): ProcessCase => ({
     caseId,
-    events: events.map(e => ({
-      caseId,
-      activity: e.activity,
-      timestamp: e.timestamp,
-      resource: e.resource,
-    })),
+    events: events.map(e => {
+      const event: ProcessCase['events'][0] = {
+        caseId,
+        activity: e.activity,
+        timestamp: e.timestamp,
+      };
+      if (e.resource !== undefined) {
+        event.resource = e.resource;
+      }
+      return event;
+    }),
   });
 
   const healthyCase = createSampleCase('HEALTHY-001', [

@@ -1,0 +1,26 @@
+flowchart TB
+
+    %% Node definitions
+    Record_Goods_Receipt[Record Goods Receipt\n(277)\n1.9d]
+    Record_Service_Entry_Sheet[Record Service Entry Sheet\n(256)\n2.9d]
+
+    %% Transitions
+    Record_Goods_Receipt ==>|14%, 0m| Record_Service_Entry_Sheet
+
+    %% Bottleneck styling
+    classDef none fill:#4CAF50,stroke:#333,stroke-width:2px,color:#000
+    classDef low fill:#8BC34A,stroke:#333,stroke-width:2px,color:#000
+    classDef medium fill:#FFC107,stroke:#333,stroke-width:2px,color:#fff
+    classDef high fill:#FF9800,stroke:#333,stroke-width:2px,color:#fff
+    classDef critical fill:#F44336,stroke:#333,stroke-width:2px,color:#fff
+    class Record_Goods_Receipt,Record_Service_Entry_Sheet low
+
+    %% Legend
+    subgraph Legend
+        direction LR
+        L1[Healthy]:::none
+        L2[Minor Delay]:::low
+        L3[Moderate]:::medium
+        L4[High]:::high
+        L5[Critical]:::critical
+    end

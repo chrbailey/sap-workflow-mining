@@ -1,0 +1,66 @@
+digraph ProcessMap {
+    // Graph settings
+    rankdir=TB;
+    splines=ortho;
+    nodesep=0.8;
+    ranksep=0.6;
+    fontname="Arial";
+    node [fontname="Arial", fontsize=11];
+    edge [fontname="Arial", fontsize=9];
+
+    // Nodes
+    Record_Invoice_Receipt [label="Record Invoice Receipt\n(278)\n6.9d", shape=box, style="filled,rounded", fillcolor="#FFC107", fontcolor="#000000"];
+    Record_Goods_Receipt [label="Record Goods Receipt\n(277)\n1.9d", shape=box, style="filled,rounded", fillcolor="#8BC34A", fontcolor="#000000"];
+    Record_Service_Entry_Sheet [label="Record Service Entry Sheet\n(256)\n2.9d", shape=box, style="filled,rounded", fillcolor="#8BC34A", fontcolor="#000000"];
+    Vendor_creates_invoice [label="Vendor Creates Invoice\n(201)\n8.1d", shape=box, style="filled,rounded", fillcolor="#FFC107", fontcolor="#000000"];
+    Clear_Invoice [label="Clear Invoice\n(159)\n30d", shape=doubleoctagon, style="filled,bold", fillcolor="#F44336", fontcolor="#FFFFFF"];
+    SRM_In_Transfer_to_Execution_Syst [label="SRM: In Transfer To Execution Syst.\n(85)\n0m", shape=box, style="filled,rounded", fillcolor="#8BC34A", fontcolor="#000000"];
+    SRM_Created [label="SRM: Created\n(70)\n1.2h", shape=ellipse, style="filled,bold", fillcolor="#8BC34A", fontcolor="#000000"];
+    SRM_Complete [label="SRM: Complete\n(70)\n0m", shape=box, style="filled,rounded", fillcolor="#4CAF50", fontcolor="#000000"];
+    SRM_Awaiting_Approval [label="SRM: Awaiting Approval\n(70)\n0m", shape=box, style="filled,rounded", fillcolor="#4CAF50", fontcolor="#000000"];
+    SRM_Document_Completed [label="SRM: Document Completed\n(70)\n4.3h", shape=box, style="filled,rounded", fillcolor="#8BC34A", fontcolor="#000000"];
+    SRM_Ordered [label="SRM: Ordered\n(70)\n0m", shape=box, style="filled,rounded", fillcolor="#4CAF50", fontcolor="#000000"];
+    SRM_Change_was_Transmitted [label="SRM: Change Was Transmitted\n(50)\n2.3d", shape=box, style="filled,rounded", fillcolor="#8BC34A", fontcolor="#000000"];
+    Create_Purchase_Order_Item [label="Create Purchase Order Item\n(50)\n12.8d", shape=box, style="filled,rounded", fillcolor="#FF9800", fontcolor="#FFFFFF"];
+
+    // Transitions
+    Record_Goods_Receipt -> Record_Service_Entry_Sheet [label="14%\n0m", penwidth=2.5, color="#1976D2"];
+    Record_Service_Entry_Sheet -> Record_Goods_Receipt [label="7%\n3h", penwidth=1, color="#6666665f"];
+    Record_Invoice_Receipt -> Record_Invoice_Receipt [label="6%\n1.1d", penwidth=1, color="#6666664d"];
+    Record_Invoice_Receipt -> Clear_Invoice [label="6%\n13.3d", penwidth=1, color="#6666664d"];
+    Record_Service_Entry_Sheet -> Record_Invoice_Receipt [label="5%\n6.4d", penwidth=1, color="#6666664d"];
+    Vendor_creates_invoice -> Record_Goods_Receipt [label="5%\n10.8d", penwidth=1, color="#6666664d"];
+    SRM_Complete -> SRM_Awaiting_Approval [label="4%\n0m", penwidth=1, color="#6666664d"];
+    SRM_Awaiting_Approval -> SRM_Document_Completed [label="4%\n0m", penwidth=1, color="#6666664d"];
+    SRM_Created -> SRM_Complete [label="4%\n1.2h", penwidth=1, color="#6666664d"];
+    Record_Invoice_Receipt -> Vendor_creates_invoice [label="3%\n7.3d", penwidth=1, color="#6666664d"];
+    SRM_In_Transfer_to_Execution_Syst -> SRM_Ordered [label="3%\n0m", penwidth=1, color="#6666664d"];
+    SRM_Document_Completed -> SRM_In_Transfer_to_Execution_Syst [label="3%\n4.2h", penwidth=1, color="#6666664d"];
+    Clear_Invoice -> Vendor_creates_invoice [label="2%\n14.9d", penwidth=1, color="#6666664d"];
+    SRM_Change_was_Transmitted -> Create_Purchase_Order_Item [label="2%\n0m", penwidth=1, color="#6666664d"];
+    Create_Purchase_Order_Item -> Vendor_creates_invoice [label="2%\n14.7d", penwidth=1, color="#6666664d"];
+    Vendor_creates_invoice -> Clear_Invoice [label="2%\n3.7d", penwidth=1, color="#6666664d"];
+
+    // Legend
+    subgraph cluster_legend {
+        label="Bottleneck Severity";
+        labeljust=l;
+        style=rounded;
+        color="#BDBDBD";
+        bgcolor="#FAFAFA";
+
+        legend_none [label="Healthy", shape=box, style="filled,rounded", fillcolor="#4CAF50", fontcolor="#000000"];
+        legend_low [label="Minor", shape=box, style="filled,rounded", fillcolor="#8BC34A", fontcolor="#000000"];
+        legend_medium [label="Moderate", shape=box, style="filled,rounded", fillcolor="#FFC107", fontcolor="#000000"];
+        legend_high [label="High", shape=box, style="filled,rounded", fillcolor="#FF9800", fontcolor="#FFFFFF"];
+        legend_critical [label="Critical", shape=box, style="filled,rounded", fillcolor="#F44336", fontcolor="#FFFFFF"];
+
+        legend_none -> legend_low -> legend_medium -> legend_high -> legend_critical [style=invis];
+    }
+
+    // Statistics
+    // Total cases: 50
+    // Unique variants: 31
+    // Avg case duration: 4756.84h
+    // Dominant variant: 26%
+}
