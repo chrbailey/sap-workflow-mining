@@ -6,6 +6,12 @@
  * Predicts outcomes for SAP O2C processes including late delivery risk,
  * credit hold probability, and completion time estimates. Supports both
  * single document and batch predictions with configurable alert thresholds.
+ *
+ * Enhanced with ML-based prediction module supporting:
+ * - 29 extracted features from process events
+ * - Heuristic and ML-ready model architecture
+ * - Risk scoring with alerts
+ * - Both O2C and P2P process support
  */
 
 import { z } from 'zod';
@@ -16,6 +22,18 @@ import {
   withTimeout,
   getPolicyConfig,
 } from '../policies/limits.js';
+
+// Import prediction module
+import {
+  ProcessCase,
+  PredictionType as ModulePredictionType,
+  predictOutcomes,
+  assessRisk,
+  extractFeatures,
+  PREDICTION_TYPES,
+  MODEL_DESCRIPTIONS,
+  formatRiskLevel,
+} from '../prediction/index.js';
 
 // ============================================================================
 // Type Definitions
@@ -782,4 +800,255 @@ export async function executePredictOutcome(
     auditContext.error(error as Error);
     throw error;
   }
+}
+
+// ============================================================================
+// P2P Prediction Support (Event Log Based)
+// ============================================================================
+
+/**
+ * Executes prediction using the ML-based prediction module
+ * Works with event log data for P2P or any process type
+ */
+export async function executePredictOutcomeFromEvents(
+  events: Array<{
+    case_id: string;
+    activity: string;
+    timestamp: string;
+    resource?: string;
+    [key: string]: unknown;
+  }>,
+  options: {
+    prediction_type: 'late_delivery' | 'credit_hold' | 'completion_time' | 'all';
+    max_cases?: number;
+    risk_threshold?: 'low' | 'medium' | 'high' | 'critical';
+    include_factors?: boolean;
+    include_recommendations?: boolean;
+  }
+): Promise<{
+  content: Array<{ type: 'text'; text: string }>;
+}> {
+  const startTime = Date.now();
+
+  if (!events || events.length === 0) {
+    return {
+      content: [
+        {
+          type: 'text',
+          text: 'No events provided. Please provide event log data for prediction.',
+        },
+      ],
+    };
+  }
+
+  // Convert events to ProcessCase format
+  const caseMap = new Map<string, ProcessCase>();
+  for (const event of events) {
+    const caseId = event.case_id;
+    if (!caseMap.has(caseId)) {
+      caseMap.set(caseId, { caseId, events: [] });
+    }
+    const processEvent: import('../prediction/index.js').ProcessEvent = {
+      caseId,
+      activity: event.activity,
+      timestamp: event.timestamp,
+      attributes: event,
+    };
+    if (event.resource !== undefined) {
+      processEvent.resource = event.resource;
+    }
+    caseMap.get(caseId)!.events.push(processEvent);
+  }
+
+  // Limit cases
+  let cases = Array.from(caseMap.values());
+  if (options.max_cases) {
+    cases = cases.slice(0, options.max_cases);
+  }
+
+  // Handle "all" prediction type - return composite assessment
+  if (options.prediction_type === 'all') {
+    const assessments = cases.slice(0, 10).map((c) => assessRisk(c));
+    const lines: string[] = [
+      '# Composite Risk Assessment',
+      '',
+      `Analyzed ${cases.length} cases using ML-based prediction module.`,
+      '',
+    ];
+
+    for (let i = 0; i < Math.min(cases.length, 10); i++) {
+      const c = cases[i]!;
+      const a = assessments[i]!;
+      lines.push(`## Case: ${c.caseId}`);
+      lines.push(`- **Overall Risk**: ${a.overallRisk}`);
+      lines.push(`- **Late Delivery Risk**: ${a.lateDeliveryRisk}%`);
+      lines.push(`- **Credit Hold Risk**: ${a.creditHoldRisk}%`);
+      lines.push(`- **Estimated Completion**: ${Math.round(a.estimatedCompletion / 24)} days`);
+
+      if (options.include_recommendations !== false && a.recommendations.length > 0) {
+        lines.push('- **Recommendations**:');
+        for (const rec of a.recommendations) {
+          lines.push(`  - ${rec}`);
+        }
+      }
+      lines.push('');
+    }
+
+    if (cases.length > 10) {
+      lines.push(`... and ${cases.length - 10} more cases analyzed`);
+    }
+
+    lines.push('');
+    lines.push(`Processing time: ${Date.now() - startTime}ms`);
+
+    return { content: [{ type: 'text', text: lines.join('\n') }] };
+  }
+
+  // Run specific prediction type
+  const predType = options.prediction_type as ModulePredictionType;
+  const { result, alerts } = predictOutcomes(cases, predType, {
+    enabled: true,
+    riskThreshold: options.risk_threshold || 'high',
+    predictionTypes: [predType],
+  });
+
+  // Format results
+  const lines: string[] = [
+    `# Prediction Results: ${result.summary.predictionType}`,
+    '',
+    '## Summary',
+    `- **Total Cases Analyzed**: ${result.summary.totalCases}`,
+    `- **Average Risk Probability**: ${Math.round(result.summary.avgProbability * 100)}%`,
+    '',
+    '## Risk Distribution',
+    `- 🟢 Low: ${result.summary.riskDistribution.low} cases`,
+    `- 🟡 Medium: ${result.summary.riskDistribution.medium} cases`,
+    `- 🟠 High: ${result.summary.riskDistribution.high} cases`,
+    `- 🔴 Critical: ${result.summary.riskDistribution.critical} cases`,
+    '',
+  ];
+
+  // High risk cases
+  if (result.summary.highRiskCases.length > 0) {
+    lines.push('## High Risk Cases');
+    for (const caseId of result.summary.highRiskCases.slice(0, 10)) {
+      const pred = result.predictions.find((p) => p.caseId === caseId);
+      if (pred) {
+        lines.push(
+          `- **${caseId}**: ${formatRiskLevel(pred.riskLevel)} (${Math.round(pred.probability * 100)}%)`
+        );
+      }
+    }
+    if (result.summary.highRiskCases.length > 10) {
+      lines.push(`- ... and ${result.summary.highRiskCases.length - 10} more`);
+    }
+    lines.push('');
+  }
+
+  // Top risk factors
+  if (result.summary.topRiskFactors.length > 0) {
+    lines.push('## Top Risk Factors');
+    for (const { factor, count } of result.summary.topRiskFactors) {
+      const factorName = factor.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+      lines.push(`- **${factorName}**: ${count} cases`);
+    }
+    lines.push('');
+  }
+
+  // Alerts
+  if (alerts.length > 0) {
+    lines.push('## Alerts');
+    for (const alert of alerts.slice(0, 5)) {
+      lines.push(`### ${alert.alertType === 'immediate_action' ? '🚨' : '⚠️'} ${alert.caseId}`);
+      lines.push(alert.message);
+      if (options.include_recommendations !== false && alert.recommendations.length > 0) {
+        lines.push('**Recommendations:**');
+        for (const rec of alert.recommendations) {
+          lines.push(`- ${rec}`);
+        }
+      }
+      lines.push('');
+    }
+    if (alerts.length > 5) {
+      lines.push(`... and ${alerts.length - 5} more alerts`);
+      lines.push('');
+    }
+  }
+
+  // Detailed predictions (first 5)
+  if (options.include_factors !== false && result.predictions.length > 0) {
+    lines.push('## Detailed Analysis (Top 5 by Risk)');
+    const topPredictions = [...result.predictions]
+      .sort((a, b) => b.probability - a.probability)
+      .slice(0, 5);
+
+    for (const pred of topPredictions) {
+      lines.push(`### Case: ${pred.caseId}`);
+      lines.push(`- **Risk Level**: ${formatRiskLevel(pred.riskLevel)}`);
+      lines.push(`- **Probability**: ${Math.round(pred.probability * 100)}%`);
+
+      if (pred.factors.length > 0) {
+        lines.push('- **Contributing Factors**:');
+        for (const factor of pred.factors.slice(0, 5)) {
+          const icon = factor.impact === 'positive' ? '✅' : factor.impact === 'negative' ? '❌' : '➖';
+          lines.push(`  - ${icon} ${factor.description}`);
+        }
+      }
+
+      if (options.include_recommendations !== false && pred.recommendations.length > 0) {
+        lines.push('- **Recommendations**:');
+        for (const rec of pred.recommendations) {
+          lines.push(`  - ${rec}`);
+        }
+      }
+      lines.push('');
+    }
+  }
+
+  lines.push(`Processing time: ${Date.now() - startTime}ms`);
+
+  return { content: [{ type: 'text', text: lines.join('\n') }] };
+}
+
+/**
+ * Quick risk assessment for a single case from events
+ */
+export function assessCaseRisk(
+  events: Array<{
+    case_id: string;
+    activity: string;
+    timestamp: string;
+    resource?: string;
+  }>
+): {
+  lateDeliveryRisk: number;
+  creditHoldRisk: number;
+  estimatedCompletion: number;
+  overallRisk: string;
+  recommendations: string[];
+  features: ReturnType<typeof extractFeatures>;
+} {
+  const caseId = events[0]?.case_id || 'unknown';
+  const processCase: ProcessCase = {
+    caseId,
+    events: events.map((e) => {
+      const event: import('../prediction/index.js').ProcessEvent = {
+        caseId,
+        activity: e.activity,
+        timestamp: e.timestamp,
+      };
+      if (e.resource !== undefined) {
+        event.resource = e.resource;
+      }
+      return event;
+    }),
+  };
+
+  const features = extractFeatures(processCase);
+  const assessment = assessRisk(processCase);
+
+  return {
+    ...assessment,
+    features,
+  };
 }

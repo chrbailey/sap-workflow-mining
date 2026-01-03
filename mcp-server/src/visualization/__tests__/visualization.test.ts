@@ -2,17 +2,17 @@
  * Visualization Module Tests
  */
 
-import {
-  buildProcessGraph,
-  Trace,
-  ProcessGraph,
-  ActivityNode,
-  ActivityEdge,
-} from '../graph-builder.js';
+import { buildProcessGraph, Trace } from '../graph-builder.js';
 import { generateMermaidDiagram } from '../mermaid-generator.js';
 import { generateDotDiagram } from '../dot-generator.js';
 import { visualizeProcess, visualizeGraph } from '../index.js';
-import { VisualizationOptions, BOTTLENECK_COLORS } from '../types.js';
+import {
+  VisualizationOptions,
+  BOTTLENECK_COLORS,
+  ProcessGraph,
+  ActivityNode,
+  ActivityEdge,
+} from '../types.js';
 
 describe('Visualization Module', () => {
   describe('Graph Builder', () => {
