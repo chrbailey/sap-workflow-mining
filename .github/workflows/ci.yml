@@ -55,16 +55,7 @@ jobs:
         run: npm run build
 
       - name: Run tests
-        run: npm test -- --coverage --coverageReporters=text --coverageReporters=lcov
-
-      - name: Upload coverage to Codecov
-        if: matrix.node-version == '20'
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: mcp-server/coverage/lcov.info
-          flags: mcp-server
-          fail_ci_if_error: false
+        run: npm test -- --coverage
 
   # ============================================================================
   # Pattern Engine (Python)
@@ -100,16 +91,7 @@ jobs:
           pip install pytest pytest-cov
 
       - name: Run tests with coverage
-        run: pytest tests/ -v --cov=src --cov-report=xml --cov-report=term
-
-      - name: Upload coverage to Codecov
-        if: matrix.python-version == '3.11'
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: pattern-engine/coverage.xml
-          flags: pattern-engine
-          fail_ci_if_error: false
+        run: pytest tests/ -v --cov=src --cov-report=term
 
   # ============================================================================
   # Demo Verification
