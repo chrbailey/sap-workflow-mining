@@ -267,9 +267,11 @@ export class SyntheticAdapter extends BaseDataAdapter {
       po_number: '',
       texts: (order.header_texts || []).map((t: GeneratorTextEntry) => ({
         text_type: t.text_id || 'NOTE',
+        text_id: t.text_id || '0001',
         text_content: t.text,
         language: t.lang || 'EN',
         created_at: t.changed_at || order.erdat,
+        created_by: order.ernam || 'SYSTEM',
       })),
       items: (order.items || []).map((item: GeneratorOrderItem) => ({
         item_number: item.posnr,
@@ -278,17 +280,19 @@ export class SyntheticAdapter extends BaseDataAdapter {
         plant: item.werks,
         quantity: item.kwmeng,
         unit: 'EA',
+        net_price: item.kwmeng > 0 ? item.netwr / item.kwmeng : 0,
         net_value: item.netwr,
         currency: item.waerk || 'USD',
         item_category: item.pstyv,
         rejection_reason: null,
         texts: (item.item_texts || []).map((t: GeneratorTextEntry) => ({
           text_type: t.text_id || 'NOTE',
+          text_id: t.text_id || '0001',
           text_content: t.text,
           language: t.lang || 'EN',
           created_at: t.changed_at || order.erdat,
+          created_by: order.ernam || 'SYSTEM',
         })),
-        schedule_lines: item.schedule_lines || [], // VBEP data
       })),
       conditions: order.conditions || [], // KONV data
     }));
