@@ -316,7 +316,11 @@ export function extractFeatures(processCase: ProcessCase): CaseFeatures {
   // Calculate average time between events
   let totalTimeBetween = 0;
   for (let i = 1; i < sortedEvents.length; i++) {
-    totalTimeBetween += hoursBetween(sortedEvents[i - 1]!.timestamp, sortedEvents[i]!.timestamp);
+    const prevEvent = sortedEvents[i - 1];
+    const currEvent = sortedEvents[i];
+    if (prevEvent && currEvent) {
+      totalTimeBetween += hoursBetween(prevEvent.timestamp, currEvent.timestamp);
+    }
   }
   const avgTimeBetweenEvents =
     sortedEvents.length > 1 ? totalTimeBetween / (sortedEvents.length - 1) : 0;
@@ -359,7 +363,8 @@ export function extractFeatures(processCase: ProcessCase): CaseFeatures {
 
   // Sequence features
   const currentActivity = activities[activities.length - 1] || '';
-  const previousActivity = activities.length > 1 ? activities[activities.length - 2]! : null;
+  const previousActivity =
+    activities.length > 1 ? (activities[activities.length - 2] ?? null) : null;
 
   // Pattern features
   const hasRework = detectRework(sortedEvents);

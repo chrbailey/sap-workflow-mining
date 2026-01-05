@@ -103,11 +103,23 @@ export function assessRisk(processCase: ProcessCase): {
   overallRisk: string;
   recommendations: string[];
 } {
-  const features = extractBatchFeatures([processCase])[0]!;
+  const featuresArr = extractBatchFeatures([processCase]);
+  const features = featuresArr[0];
+  if (!features) {
+    throw new Error('Failed to extract features from process case');
+  }
 
-  const lateDelivery = predictBatch([features], 'late_delivery')[0]!;
-  const creditHold = predictBatch([features], 'credit_hold')[0]!;
-  const completion = predictBatch([features], 'completion_time')[0]!;
+  const lateDeliveryArr = predictBatch([features], 'late_delivery');
+  const creditHoldArr = predictBatch([features], 'credit_hold');
+  const completionArr = predictBatch([features], 'completion_time');
+
+  const lateDelivery = lateDeliveryArr[0];
+  const creditHold = creditHoldArr[0];
+  const completion = completionArr[0];
+
+  if (!lateDelivery || !creditHold || !completion) {
+    throw new Error('Failed to generate predictions');
+  }
 
   // Combine recommendations
   const allRecommendations = [

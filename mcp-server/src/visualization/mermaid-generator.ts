@@ -132,7 +132,10 @@ export function generateMermaidDiagram(
       if (!severityGroups.has(node.bottleneckSeverity)) {
         severityGroups.set(node.bottleneckSeverity, []);
       }
-      severityGroups.get(node.bottleneckSeverity)!.push(sanitizeId(node.id));
+      const group = severityGroups.get(node.bottleneckSeverity);
+      if (group) {
+        group.push(sanitizeId(node.id));
+      }
     }
 
     // Add class definitions

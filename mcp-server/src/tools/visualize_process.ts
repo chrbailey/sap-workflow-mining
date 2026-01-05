@@ -230,7 +230,8 @@ function getBottleneckSeverity(
     default: { medium: 24, high: 72 },
   };
 
-  const threshold = thresholds[stepType] ?? thresholds['default']!;
+  const defaultThreshold = { medium: 24, high: 72 };
+  const threshold = thresholds[stepType] ?? defaultThreshold;
 
   if (durationHours >= threshold.high) {
     return 'high';
@@ -296,8 +297,9 @@ function buildProcessGraph(
 
     // Create edges between consecutive documents
     for (let i = 0; i < sortedDocs.length - 1; i++) {
-      const fromDoc = sortedDocs[i]!;
-      const toDoc = sortedDocs[i + 1]!;
+      const fromDoc = sortedDocs[i];
+      const toDoc = sortedDocs[i + 1];
+      if (!fromDoc || !toDoc) continue;
 
       const fromId = `${fromDoc.doc_category}_${fromDoc.doc_number}`;
       const toId = `${toDoc.doc_category}_${toDoc.doc_number}`;
@@ -317,7 +319,10 @@ function buildProcessGraph(
       if (!timingMap.has(stepKey)) {
         timingMap.set(stepKey, []);
       }
-      timingMap.get(stepKey)!.push(durationHours);
+      const stepTimings = timingMap.get(stepKey);
+      if (stepTimings) {
+        stepTimings.push(durationHours);
+      }
     }
   }
 
@@ -855,7 +860,7 @@ async function executeO2CVisualization(
       return {
         step: `${getDocCategoryLabel(n.doc_category, n.doc_type)} (${n.id.split('_').pop()})`,
         avg_duration_hours: Math.round(avgDuration * 100) / 100,
-        severity: n.bottleneck_severity!,
+        severity: n.bottleneck_severity ?? 'medium',
       };
     });
 

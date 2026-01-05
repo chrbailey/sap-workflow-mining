@@ -59,11 +59,13 @@ export function buildProcessGraph(traces: Trace[], processType: ProcessType = 'O
     variants.set(variantKey, (variants.get(variantKey) || 0) + 1);
 
     // Track start activity
-    const firstEvent = trace.events[0]!;
+    const firstEvent = trace.events[0];
+    if (!firstEvent) continue;
     startActivities.set(firstEvent.activity, (startActivities.get(firstEvent.activity) || 0) + 1);
 
     // Track end activity
-    const lastEvent = trace.events[trace.events.length - 1]!;
+    const lastEvent = trace.events[trace.events.length - 1];
+    if (!lastEvent) continue;
     endActivities.set(lastEvent.activity, (endActivities.get(lastEvent.activity) || 0) + 1);
 
     // Calculate case duration
@@ -76,7 +78,8 @@ export function buildProcessGraph(traces: Trace[], processType: ProcessType = 'O
 
     // Process each event
     for (let i = 0; i < trace.events.length; i++) {
-      const event = trace.events[i]!;
+      const event = trace.events[i];
+      if (!event) continue;
       const activity = event.activity;
 
       // Count activity frequency
@@ -84,7 +87,8 @@ export function buildProcessGraph(traces: Trace[], processType: ProcessType = 'O
 
       // Calculate activity duration (time until next event)
       if (i < trace.events.length - 1) {
-        const nextEvent = trace.events[i + 1]!;
+        const nextEvent = trace.events[i + 1];
+        if (!nextEvent) continue;
         const currentTime = new Date(event.timestamp).getTime();
         const nextTime = new Date(nextEvent.timestamp).getTime();
         const durationHours = (nextTime - currentTime) / (1000 * 60 * 60);
@@ -93,7 +97,10 @@ export function buildProcessGraph(traces: Trace[], processType: ProcessType = 'O
           if (!activityDurations.has(activity)) {
             activityDurations.set(activity, []);
           }
-          activityDurations.get(activity)!.push(durationHours);
+          const durations = activityDurations.get(activity);
+          if (durations) {
+            durations.push(durationHours);
+          }
         }
 
         // Count edge frequency
@@ -104,7 +111,10 @@ export function buildProcessGraph(traces: Trace[], processType: ProcessType = 'O
         if (!edgeTimes.has(edgeKey)) {
           edgeTimes.set(edgeKey, []);
         }
-        edgeTimes.get(edgeKey)!.push(durationHours);
+        const times = edgeTimes.get(edgeKey);
+        if (times) {
+          times.push(durationHours);
+        }
       }
     }
   }
@@ -222,8 +232,10 @@ function percentile(arr: number[], p: number): number {
   const index = (p / 100) * (sorted.length - 1);
   const lower = Math.floor(index);
   const upper = Math.ceil(index);
-  if (lower === upper) return sorted[lower]!;
-  return sorted[lower]! + (sorted[upper]! - sorted[lower]!) * (index - lower);
+  const lowerVal = sorted[lower] ?? 0;
+  const upperVal = sorted[upper] ?? lowerVal;
+  if (lower === upper) return lowerVal;
+  return lowerVal + (upperVal - lowerVal) * (index - lower);
 }
 
 /**

@@ -857,7 +857,10 @@ export async function executePredictOutcomeFromEvents(
     if (event.resource !== undefined) {
       processEvent.resource = event.resource;
     }
-    caseMap.get(caseId)!.events.push(processEvent);
+    const caseData = caseMap.get(caseId);
+    if (caseData) {
+      caseData.events.push(processEvent);
+    }
   }
 
   // Limit cases
@@ -877,8 +880,9 @@ export async function executePredictOutcomeFromEvents(
     ];
 
     for (let i = 0; i < Math.min(cases.length, 10); i++) {
-      const c = cases[i]!;
-      const a = assessments[i]!;
+      const c = cases[i];
+      const a = assessments[i];
+      if (!c || !a) continue;
       lines.push(`## Case: ${c.caseId}`);
       lines.push(`- **Overall Risk**: ${a.overallRisk}`);
       lines.push(`- **Late Delivery Risk**: ${a.lateDeliveryRisk}%`);

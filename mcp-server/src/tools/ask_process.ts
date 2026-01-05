@@ -309,8 +309,8 @@ async function buildContext(
   const oneYearAgo = new Date(now);
   oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
   const defaultDateRange = {
-    from: oneYearAgo.toISOString().split('T')[0]!,
-    to: now.toISOString().split('T')[0]!,
+    from: oneYearAgo.toISOString().split('T')[0] ?? '',
+    to: now.toISOString().split('T')[0] ?? '',
   };
 
   // Detect adapter type and build appropriate context
@@ -379,9 +379,10 @@ export async function executeAskProcess(
     if (input.include_sample_data) {
       // Extract keywords from question to fetch relevant data
       const keywords = extractKeywords(input.question);
-      if (keywords.length > 0) {
+      const firstKeyword = keywords[0];
+      if (firstKeyword) {
         const searchResults = await adapter.searchDocText({
-          pattern: keywords[0]!,
+          pattern: firstKeyword,
           limit: 5,
         });
         if (searchResults.length > 0) {
